@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Green Level CTSO</title>
+    <style>
+      h1.mainHeader {
+        text-align: center;
+        background-color: #305882;
+        color: limegreen;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0px;
+      }
+      h1 span {
+        font-weight: 700;
+        font-size: 80px;
+      }
+      .dropButton {
+        background-color: black;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      .dropButton:hover,
+      .dropButton:focus {
+        background-color: blue;
+      }
+      .dropdown {
+        position: relative;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        text-align: left;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .show {
+        display: block;
+      }
+      .glGatorsMascot {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropButton")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropButton">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="CSTOHome.html">Home</a>
+        <a href="WhyCTE.html">Why CTE?</a>
+        <a href="CTECareerPathways.html">CTE Career Pathways</a>
+        <a href="AgriculturalEducation.html">Agricultural Education</a>
+        <a href="BFM.html">Business, Finance, Marketing</a>
+        <a href="csIT.html">Computer Science & IT</a>
+        <a href="FCS.html">Family Consumer Science</a>
+        <a href="HSE.html">Health Science Education</a>
+        <a href="TTEE.html">Trade Technology Engineering Education</a>
+        <a href="CTEInternship.html">CTE Internship</a>
+        <a href="CTSO.html">CTSO</a>
+      </div>
+    </div>
+    <img
+      class="glGatorsMascot"
+      src="images/greenLevelGators.jpg"
+      alt="Green Level Gators"
+    />
+    <h1 class="mainHeader">
+      All about<br />
+      <span style="color: lightgrey">Career and Technical Education</span><br />
+      at<br />
+      Green Level High School
+    </h1>
+  </body>
+</html>

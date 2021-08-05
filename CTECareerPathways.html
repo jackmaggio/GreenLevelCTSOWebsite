@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CTE Career Pathways</title>
+    <style>
+      em {
+        color: limegreen;
+        font-style: normal;
+      }
+      h1.mainHeader {
+        text-align: center;
+        color: lightgrey;
+        margin-top: 50px;
+        margin-left: 610px;
+        font-size: 60px;
+        font-family: serif;
+        z-index: 2;
+        position: absolute;
+      }
+      .dropButton {
+        background-color: black;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      .dropButton:hover,
+      .dropButton:focus {
+        background-color: blue;
+      }
+      .dropdown {
+        position: relative;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        text-align: left;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .show {
+        display: block;
+      }
+      p.careerParagraph {
+        font-family: serif;
+        font-size: 20px;
+        text-align: left;
+        margin-top: 200px;
+        margin-left: 400px;
+        margin-right: 400px;
+      }
+      img.careersImage {
+        margin-top: 10px;
+        margin-left: 500px;
+        text-align: center;
+      }
+      .background {
+        background-color: darkslateblue;
+        width: 2000px;
+        height: 150px;
+        z-index: 1;
+        position: absolute;
+        margin-top: 10px;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropButton")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropButton">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="CSTOHome.html">Home</a>
+        <a href="WhyCTE.html">Why CTE?</a>
+        <a href="CTECareerPathways.html">CTE Career Pathways</a>
+        <a href="AgriculturalEducation.html">Agricultural Education</a>
+        <a href="BFM.html">Business, Finance, Marketing</a>
+        <a href="csIT.html">Computer Science & IT</a>
+        <a href="FCS.html">Family Consumer Science</a>
+        <a href="HSE.html">Health Science Education</a>
+        <a href="TTEE.html">Trade Technology Engineering Education</a>
+        <a href="CTEInternship.html">CTE Internship</a>
+        <a href="CTSO.html">CTSO</a>
+      </div>
+    </div>
+    <div class="background"></div>
+    <h1 class="mainHeader"><em>CTE</em> Career Pathways</h1>
+    <p class="careerParagraph">
+      Career Pathways™ provide students the opportunity to discover their
+      interests and their passions, and empowers them to choose the educational
+      pathway that can lead to success in high school, college and career.​ Here
+      at Green Level high school we currently have nine CTE Career Pathways for
+      students to explore.
+    </p>
+    <img
+      class="careersImage"
+      src="images/careerPathwaysImage.jpg"
+      alt="CTE Career Paths"
+    />
+  </body>
+</html>
