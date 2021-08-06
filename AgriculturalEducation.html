@@ -10,35 +10,21 @@
         font-style: normal;
         font-size: 30px;
       }
-      h1.mainHeader {
-        text-align: center;
-        color: lightgrey;
-        top: 110px;
-        margin-left: 640px;
-        font-size: 60px;
-        font-family: serif;
-        z-index: 2;
-        position: absolute;
-      }
-      .background {
-        background-color: rgb(20, 3, 95);
-        width: 1100px;
-        height: 200px;
-        z-index: 1;
-        position: absolute;
-        margin-top: -210px;
-        margin-left: 380px;
-      }
       .dropButton {
         background-color: black;
         color: white;
-        padding: 16px;
-        font-size: 16px;
+        font-size: 100%;
         border: none;
         cursor: pointer;
-        top: 60px;
-        margin-left: 380px;
-        position: absolute;
+        position: relative;
+        left: 20%;
+        top: 30px;
+        min-width: 100px;
+        height: 40px;
+      }
+      .dropButton,
+      .glcte {
+        display: inline-block;
       }
       .dropButton:hover,
       .dropButton:focus {
@@ -49,12 +35,14 @@
         display: none;
         position: absolute;
         background-color: #f1f1f1;
-        min-width: 160px;
+        min-width: 10%;
+        max-width: 30%;
+        height: auto;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 5;
         text-align: left;
-        margin-left: 380px;
-        top: 110px;
+        left: 385px;
+        top: 80px;
       }
       .dropdown-content a {
         color: black;
@@ -69,39 +57,40 @@
         display: block;
       }
       .glcte {
-        position: absolute;
-        right: 415px;
-        top: 75px;
-        font-size: 30px;
+        position: relative;
+        font-size: 190%;
         font-weight: bold;
+        left: 68%;
       }
       p.agrPara {
-        margin-top: 330px;
-        margin-left: 400px;
-        margin-right: 400px;
-        text-align: left;
+        position: relative;
         font-size: 20px;
+        left: 380px;
+        right: 380px;
+        width: 1150px;
       }
       h2.AgCareersHeader {
+        position: relative;
         color: rgb(32, 156, 32);
         font-size: 30px;
-        margin-left: 0px;
-        margin-right: 00px;
         margin-top: 5px;
         text-align: center;
         font-weight: 1000;
       }
       .ASImage {
+        position: relative;
         text-align: center;
-        margin-left: 560px;
-        margin-right: 160px;
+        left: 30%;
         border: black;
         width: 300px;
         height: 400px;
+        min-width: 100px;
+        min-height: 100px;
       }
       .PSImage {
+        position: relative;
         text-align: center;
-        margin-right: 5px;
+        left: 37%;
         width: 300px;
         height: 400px;
       }
@@ -114,21 +103,24 @@
       .hc1,
       .hc2,
       .mc {
-        margin-left: 400px;
+        position: relative;
+        left: 21%;
+        margin-bottom: 0%;
         font-family: serif;
         color: rgb(32, 156, 32);
         font-weight: bold;
         font-size: 30px;
-        margin-bottom: 0px;
       }
       .as1Para,
       .as2Para,
       .hc1Para,
       .hc2Para,
       .mcPara {
-        margin-left: 400px;
-        margin-right: 400px;
-        margin-top: 4px;
+        position: relative;
+        bottom: 10px;
+        left: 21%;
+        width: 1000px;
+        min-width: 300px;
         font-size: 20px;
       }
     </style>
@@ -168,11 +160,38 @@
       </div>
     </div>
     <div class="glcte">Green Level CTE</div>
-    <div class="background"></div>
-    <h1 class="mainHeader">
-      Agricultural Education<br />
-      <em>FFA CTSO</em>
-    </h1>
+    <div
+      id="background"
+      style="
+        position: relative;
+        width: auto;
+        height: 150px;
+        margin-right: 20%;
+        min-height: 100%;
+        max-height: 100%;
+        margin-top: 0%;
+        margin-left: 20%;
+        background: rgb(20, 3, 95);
+      "
+    >
+      <h1
+        class="mainHeader"
+        style="
+          position: absolute;
+          text-align: center;
+          width: auto;
+          height: 100px;
+          left: 10%;
+          right: 10%;
+          top: 0px;
+          font-size: 300%;
+          color: lightgrey;
+        "
+      >
+        Agricultural Education <br />
+        <em>FFA CTSO</em>
+      </h1>
+    </div>
     <p class="agrPara">
       Agricultural Education is a systematic program of instruction available to
       students desiring to learn about the science, business, and technology of
