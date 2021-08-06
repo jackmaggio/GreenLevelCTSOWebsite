@@ -8,38 +8,13 @@
         color: limegreen;
         font-style: normal;
       }
-      h1.mainHeader {
-        text-align: center;
-        color: lightgrey;
-        top: 15%;
-        margin-left: 33%;
-        font-size: 375%;
-        font-family: serif;
-        z-index: 2;
-        position: absolute;
-        min-width: 32%;
-        max-width: 32%;
-        min-height: 6%;
-        max-height: 6%;
-      }
-      .background {
-        background-color: rgb(20, 3, 95);
-        min-width: 58%;
-        max-width: 58%;
-        min-height: 20%;
-        max-height: 20%;
-        z-index: -1;
-        position: absolute;
-        margin-top: -11%;
-        margin-left: 20%;
-      }
       .dropButton {
         background-color: black;
         color: white;
         font-size: 100%;
         border: none;
         cursor: pointer;
-        top: 7%;
+        top: 12%;
         margin-left: 20%;
         position: absolute;
         min-width: 5%;
@@ -80,7 +55,7 @@
       .glcte {
         position: absolute;
         right: 19%;
-        top: 9%;
+        top: 14%;
         font-size: 190%;
         font-weight: bold;
         min-width: 15%;
@@ -89,16 +64,18 @@
         max-height: 6%;
       }
       p.careerParagraph {
+        position: relative;
         font-family: serif;
         font-size: 20px;
         text-align: left;
-        margin-top: 18%;
+        margin-top: 1%;
         margin-left: 20%;
         min-width: 59%;
         max-width: 59%;
         height: auto;
       }
       img.careersImage {
+        position: relative;
         margin-top: 2%;
         margin-left: 28%;
         text-align: center;
@@ -143,8 +120,36 @@
       </div>
     </div>
     <div class="glcte">Green Level CTE</div>
-    <div class="background"></div>
-    <h1 class="mainHeader"><em>CTE</em> Career Pathways</h1>
+    <div
+      id="background"
+      style="
+        position: relative;
+        width: 100px;
+        height: 150px;
+        min-width: 58%;
+        max-width: 58%;
+        min-height: 100%;
+        max-height: 100%;
+        margin-top: 10%;
+        margin-left: 20%;
+        background: rgb(20, 3, 95);
+      "
+    >
+      <h1
+        class="mainHeader"
+        style="
+          position: absolute;
+          width: 500px;
+          height: 100px;
+          margin-left: 30%;
+          margin-top: 4%;
+          font-size: 300%;
+          color: lightgrey;
+        "
+      >
+        <em>CTE</em> Career Pathways
+      </h1>
+    </div>
     <p class="careerParagraph">
       Career Pathways™ provide students the opportunity to discover their
       interests and their passions, and empowers them to choose the educational
