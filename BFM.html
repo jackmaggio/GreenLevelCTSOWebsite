@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Business, Finance, and Marketing</title>
+    <style>
+      em {
+        color: rgb(32, 156, 32);
+        font-style: normal;
+        font-size: 70px;
+      }
+      span {
+        font-size: 30px;
+        color: rgb(32, 156, 32);
+      }
+      h1.mainHeader {
+        text-align: center;
+        color: lightgrey;
+        top: 100px;
+        margin-left: 540px;
+        font-size: 60px;
+        font-family: serif;
+        z-index: 2;
+        position: absolute;
+      }
+      .background {
+        background-color: rgb(20, 3, 95);
+        width: 1100px;
+        height: 200px;
+        z-index: 1;
+        position: absolute;
+        margin-top: -210px;
+        margin-left: 380px;
+      }
+      .dropButton {
+        background-color: black;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        top: 60px;
+        margin-left: 380px;
+        position: absolute;
+      }
+      .dropButton:hover,
+      .dropButton:focus {
+        background-color: blue;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+        text-align: left;
+        margin-left: 380px;
+        top: 110px;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .show {
+        display: block;
+      }
+      .glcte {
+        position: absolute;
+        right: 415px;
+        top: 75px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      p.bfmPara {
+        margin-top: 330px;
+        margin-left: 400px;
+        margin-right: 400px;
+        text-align: left;
+        font-size: 20px;
+      }
+      h2.bfmHeader {
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+        margin-left: 0px;
+        margin-right: 00px;
+        margin-top: 5px;
+        text-align: center;
+        font-weight: 1000;
+      }
+      .entrepreneurshipImage {
+        height: 600px;
+        width: 500px;
+        margin-left: 400px;
+      }
+      .entr1,
+      .entr2,
+      .pob,
+      .mc1 {
+        color: rgb(32, 156, 32);
+        font-size: 20px;
+      }
+      .entr1 {
+        position: absolute;
+        right: 700px;
+        top: 465px;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+      }
+      .entr1P {
+        position: absolute;
+        right: 447px;
+        top: 515px;
+        font-size: 17px;
+        text-align: left;
+        width: 500px;
+        font-weight: bold;
+        color: darkslategray;
+      }
+      .entr2 {
+        position: absolute;
+        right: 690px;
+        top: 680px;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+      }
+      .entr2P {
+        position: absolute;
+        right: 447px;
+        top: 735px;
+        font-size: 17px;
+        text-align: left;
+        width: 500px;
+        font-weight: bold;
+        color: darkslategray;
+      }
+      .pob {
+        position: absolute;
+        right: 670px;
+        top: 860px;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+      }
+      .pobP {
+        position: absolute;
+        right: 447px;
+        top: 910px;
+        font-size: 17px;
+        text-align: left;
+        width: 500px;
+        font-weight: bold;
+        color: darkslategray;
+      }
+      .mc1 {
+        position: absolute;
+        right: 530px;
+        top: 1010px;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+      }
+      .mc1P {
+        position: absolute;
+        right: 447px;
+        top: 1065px;
+        font-size: 17px;
+        text-align: left;
+        width: 500px;
+        font-weight: bold;
+        color: darkslategray;
+      }
+      .excel {
+        position: absolute;
+        right: 745px;
+        top: 1220px;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+      }
+      .excelP {
+        position: absolute;
+        right: 447px;
+        top: 1280px;
+        font-size: 17px;
+        text-align: left;
+        width: 500px;
+        font-weight: bold;
+        color: darkslategray;
+      }
+      .newCourseHead {
+        position: absolute;
+        right: 1080px;
+        top: 1110px;
+        color: rgb(13, 1, 121);
+        font-size: 25px;
+      }
+      .fp1 {
+        position: absolute;
+        right: 1150px;
+        top: 1140px;
+        color: rgb(32, 156, 32);
+        font-size: 22px;
+      }
+      .fp1P {
+        position: absolute;
+        right: 1000px;
+        top: 1190px;
+        font-size: 17px;
+        text-align: left;
+        width: 500px;
+        font-weight: bold;
+        color: darkslategray;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropButton")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropButton">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="CSTOHome.html">Home</a>
+        <a href="WhyCTE.html">Why CTE?</a>
+        <a href="CTECareerPathways.html">CTE Career Pathways</a>
+        <a href="AgriculturalEducation.html">Agricultural Education</a>
+        <a href="BFM.html">Business, Finance, Marketing</a>
+        <a href="csIT.html">Computer Science & IT</a>
+        <a href="FCS.html">Family Consumer Science</a>
+        <a href="HSE.html">Health Science Education</a>
+        <a href="TTEI.html">Trade Technology Engineering Education</a>
+        <a href="CTEInternship.html">CTE Internship</a>
+        <a href="CTSO.html">CTSO</a>
+      </div>
+    </div>
+    <div class="glcte">Green Level CTE</div>
+    <div class="background"></div>
+    <h1 class="mainHeader">
+      <em>B</em>usiness, <em>F</em>inance, <em>M</em>arketing<br />
+      <span>DECA and FBLA CTSO</span>
+    </h1>
+    <p class="bfmPara">
+      Business, Finance, and Marketing (BFM) provides students with meaningful
+      instruction for and about business. Instruction in Business, Finance and
+      Marketing Education encompasses business skills and techniques, an
+      understanding of basic economics, an understanding of making socioeconomic
+      decisions and producing goods and services to consumption, and business
+      attitudes essential to become a globally engaged and productive citizen.
+    </p>
+    <h2 class="bfmHeader">
+      BFM Career Pathways and Courses at Green Level High School
+    </h2>
+    <img
+      class="entrepreneurshipImage"
+      src="images/entrepreneurship.jpg"
+      alt="Entrepreneurship Career Pathway"
+    />
+    <h3 class="entr1">Entrepreneurship I</h3>
+    <p class="entr1P">
+      In this course, students evaluate the concepts of going into business for
+      themselves and working for or operating a small business. They become
+      acquainted with channel management, pricing, product/service management,
+      and promotion. Emphasis is on the exploration of feasible ideas of
+      products/services, research procedures, business financing, marketing
+      strategies, and access to resources for starting a small business.<i
+        >Honors Portfolio is required for Honors Credit</i
+      >
+    </p>
+    <h3 class="entr2">Entrepreneurship II</h3>
+    <p class="entr2P">
+      In this course, students continue the development of a business idea and
+      develop an understanding of pertinent decisions to be made for business
+      positioning, financing, staffing, and profit planning. Students acquire
+      in-depth understanding of business regulations, risks, management, and
+      marketing and will develop a business plan. Honors Level
+    </p>
+    <h3 class="pob">Principles of Business</h3>
+    <p class="pobP">
+      This course introduces students to topics related to business, finance,
+      management, and marketing to cover business in the global economy,
+      functions of business organization and management, marketing basics, and
+      significance of business financial and risk management.
+    </p>
+    <h3 class="mc1">Microsoft Word and Powerpoint</h3>
+    <p class="mc1P">
+      Students in Microsoft Imagine Academies benefit from world-class Microsoft
+      curriculum and cutting-edge software tools to tackle real-world challenges
+      in the classroom environment. This class is designed to help you use the
+      newest version of Microsoft Excel interface, commands, and features to
+      present, analyze, and manipulate various types of data. Students will
+      learn to manage workbooks as well as how to manage, manipulate, and format
+      data. ​Honors Portfolio is required for Honors credit​
+    </p>
+    <h3 class="excel">Microsoft Excel</h3>
+    <p class="excelP">
+      Students in Microsoft Imagine Academies benefit from world-class Microsoft
+      curriculum and cutting-edge software tools to tackle real-world challenges
+      in the classroom environment. This class is designed to help you use the
+      newest version of Microsoft Excel interface, commands, and features to
+      present, analyze, and manipulate various types of data. Students will
+      learn to manage workbooks as well as how to manage, manipulate, and format
+      data. Honors Level
+    </p>
+    <h3 class="newCourseHead">New Course Offering Fall 2021</h3>
+    <h4 class="fp1">Financial Planning I</h4>
+    <p class="fp1P">
+      This course is designed to cover key strategies for wealth building as
+      students learn to evaluate businesses for investment opportunities while
+      incorporating current headlines and trends, financial resources, and stock
+      market simulation. Also, students will develop techniques to enhance
+      personal wealth building for a secure financial future. ​Principles of
+      Business is a prerequisite for this course.
+    </p>
+  </body>
+</html>

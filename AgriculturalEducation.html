@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Agricultural Education</title>
+    <style>
+      em {
+        color: rgb(32, 156, 32);
+        font-style: normal;
+        font-size: 30px;
+      }
+      h1.mainHeader {
+        text-align: center;
+        color: lightgrey;
+        top: 110px;
+        margin-left: 640px;
+        font-size: 60px;
+        font-family: serif;
+        z-index: 2;
+        position: absolute;
+      }
+      .background {
+        background-color: rgb(20, 3, 95);
+        width: 1100px;
+        height: 200px;
+        z-index: 1;
+        position: absolute;
+        margin-top: -210px;
+        margin-left: 380px;
+      }
+      .dropButton {
+        background-color: black;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        top: 60px;
+        margin-left: 380px;
+        position: absolute;
+      }
+      .dropButton:hover,
+      .dropButton:focus {
+        background-color: blue;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+        text-align: left;
+        margin-left: 380px;
+        top: 110px;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .show {
+        display: block;
+      }
+      .glcte {
+        position: absolute;
+        right: 415px;
+        top: 75px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      p.agrPara {
+        margin-top: 330px;
+        margin-left: 400px;
+        margin-right: 400px;
+        text-align: left;
+        font-size: 20px;
+      }
+      h2.AgCareersHeader {
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+        margin-left: 0px;
+        margin-right: 00px;
+        margin-top: 5px;
+        text-align: center;
+        font-weight: 1000;
+      }
+      .ASImage {
+        text-align: center;
+        margin-left: 560px;
+        margin-right: 160px;
+        border: black;
+        width: 300px;
+        height: 400px;
+      }
+      .PSImage {
+        text-align: center;
+        margin-right: 5px;
+        width: 300px;
+        height: 400px;
+      }
+      .ASImage,
+      .PSImage {
+        display: inline;
+      }
+      .as1,
+      .as2,
+      .hc1,
+      .hc2,
+      .mc {
+        margin-left: 400px;
+        font-family: serif;
+        color: rgb(32, 156, 32);
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 0px;
+      }
+      .as1Para,
+      .as2Para,
+      .hc1Para,
+      .hc2Para,
+      .mcPara {
+        margin-left: 400px;
+        margin-right: 400px;
+        margin-top: 4px;
+        font-size: 20px;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropButton")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropButton">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="CSTOHome.html">Home</a>
+        <a href="WhyCTE.html">Why CTE?</a>
+        <a href="CTECareerPathways.html">CTE Career Pathways</a>
+        <a href="AgriculturalEducation.html">Agricultural Education</a>
+        <a href="BFM.html">Business, Finance, Marketing</a>
+        <a href="csIT.html">Computer Science & IT</a>
+        <a href="FCS.html">Family Consumer Science</a>
+        <a href="HSE.html">Health Science Education</a>
+        <a href="TTEI.html">Trade Technology Engineering Education</a>
+        <a href="CTEInternship.html">CTE Internship</a>
+        <a href="CTSO.html">CTSO</a>
+      </div>
+    </div>
+    <div class="glcte">Green Level CTE</div>
+    <div class="background"></div>
+    <h1 class="mainHeader">
+      Agricultural Education<br />
+      <em>FFA CTSO</em>
+    </h1>
+    <p class="agrPara">
+      Agricultural Education is a systematic program of instruction available to
+      students desiring to learn about the science, business, and technology of
+      plant and animal production and/or about the environmental and natural
+      resources systems.
+    </p>
+    <h2 class="AgCareersHeader">
+      Ag Career Pathways and Courses at Green Level High School
+    </h2>
+    <img
+      class="ASImage"
+      src="images/animalScience.jpg"
+      alt="Animal Science Career Pathway"
+    />
+    <img
+      class="PSImage"
+      src="images/plantSystems.jpg"
+      alt="Plant Systems Career Pathway"
+    />
+    <h3 class="as1">Animal Science I</h3>
+    <p class="as1Para">
+      This course focuses on the basic scientific principles and processes that
+      are involved in animal physiology, breeding, nutrition, and care in
+      preparation for an animal science career major. Topics include animal
+      diseases, introduction to animal science, animal nutrition, animal science
+      issues, career opportunities, and animal evaluation.
+      <i>Honors Portfolio is required for Honors Credit</i>
+    </p>
+    <h3 class="as2">Animal Science II</h3>
+    <p class="as2Para">
+      This course includes more advanced scientific principles and communication
+      skills and includes animal waste management, animal science economics,
+      decision making, and global concerns in the industry, genetics, and
+      breeding. <i>Honors Portfolio is required for Honors Credit</i>
+    </p>
+    <h3 class="hc1">Horticulture I</h3>
+    <p class="hc1Para">
+      This course provides instruction on the broad field of horticulture with
+      emphasis on the scientific and technical knowledge for a career in
+      horticulture. Topics in this course include plant growth and development,
+      plant nutrition, media selection, basic plant identification, pest
+      management, chemical disposal, customer relations, and career
+      opportunities. <i>Honors Portfolio is required for Honors Credit</i>
+    </p>
+    <h3 class="hc2">Horticulture II</h3>
+    <p class="hc2Para">
+      This course covers instruction that expands scientific knowledge and
+      skills to include more advanced scientific computations and communication
+      skills needed in the horticulture industry. Topics include greenhouse
+      plant production and management, bedding plant production, watering
+      systems, light effects, basic landscape design, installation and
+      maintenance, lawn and turf grass management, and personal development.
+      <i>Honors Portfolio is required for Honors Credit</i>
+    </p>
+    <h3 class="mc">Microsoft Word and Powerpoint</h3>
+    <p class="mcPara">
+      Students in the Microsoft Imagine Academy benefit from world-class
+      Microsoft curriculum and software tools to tackle real-world challenges in
+      the classroom environment. Students will learn to use the current version
+      of Microsoft Word interface, commands, and features to create, enhance,
+      customize, share and create complex documents, and publish them. Students
+      will learn to use the current version of Microsoft PowerPoint interface,
+      commands, and features to create, enhance, customize, and deliver
+      presentations. <i>Honors Portfolio is required for Honors Credit</i>
+    </p>
+  </body>
+</html>
