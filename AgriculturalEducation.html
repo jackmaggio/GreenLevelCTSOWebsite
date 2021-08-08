@@ -8,7 +8,196 @@
       em {
         color: rgb(32, 156, 32);
         font-style: normal;
+        font-size: 70px;
+      }
+      span {
         font-size: 30px;
+        color: rgb(32, 156, 32);
+      }
+      html,
+      body {
+        margin: 0;
+      }
+      #grid {
+        display: grid;
+        grid-row-gap: 0;
+        grid-column-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4em 17em 2em 10em 27em 10em;
+        background-color: white;
+        width: 100%;
+      }
+      #menu {
+        text-align: left;
+        float: left;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #slogan {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #infoAndHeading {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      #images {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 5;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #mainContent {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 6;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h1.mainHeader {
+        text-align: center;
+        color: lightgrey;
+        top: 0.7em;
+        max-height: 3em;
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 60px;
+        font-family: serif;
+        z-index: 2;
+        position: relative;
+      }
+      .background {
+        background-color: rgb(20, 3, 95);
+        width: 70em;
+        height: 14em;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+        position: relative;
+      }
+
+      .dropButton:hover,
+      .dropButton:focus {
+        background-color: blue;
+      }
+
+      .glcte {
+        position: relative;
+        top: 1.7em;
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .agrHeader {
+        position: relative;
+        text-align: center;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+        overflow: auto;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 7%;
+        padding-left: 7%;
+        min-width: 20em;
+        max-height: 3em;
+      }
+      .asImage {
+        height: 25em;
+        width: 20em;
+        padding-right: 2.5em;
+        padding-left: 15em;
+      }
+      .psImage {
+        height: 25em;
+        width: 20em;
+        padding-left: 2.5em;
+        padding-right: 15em;
+      }
+      .as1,
+      .as2,
+      .hc1,
+      .hc2,
+      .mc {
+        color: rgb(32, 156, 32);
+        position: relative;
+        font-size: 30px;
+        text-align: left;
+      }
+
+      .as1P,
+      .as2P,
+      .hc1P,
+      .hc2P,
+      .mcP {
+        font-size: 17px;
+        font-weight: bold;
+        color: darkslategray;
+        position: relative;
+        padding-left: 0;
+        max-width: 67em;
+      }
+      .as1 {
+        bottom: 1.2em;
+      }
+      .as1P {
+        bottom: 3.2em;
+      }
+      .as2 {
+        bottom: 2em;
+      }
+      .as2P {
+        bottom: 4.5em;
+      }
+      .hc1 {
+        bottom: 3em;
+      }
+      .hc1P {
+        bottom: 6.5em;
+      }
+      .hc2 {
+        bottom: 4em;
+      }
+      .hc2P {
+        bottom: 8.5em;
+      }
+      .mc {
+        bottom: 5em;
+      }
+      .mcP {
+        bottom: 10.5em;
+      }
+
+      .agrPara {
+        position: relative;
+        font-size: 20px;
+        width: 56em;
+        text-align: left;
       }
       .dropButton {
         background-color: black;
@@ -17,14 +206,9 @@
         border: none;
         cursor: pointer;
         position: relative;
-        left: 20%;
-        top: 30px;
-        min-width: 100px;
-        height: 40px;
-      }
-      .dropButton,
-      .glcte {
-        display: inline-block;
+        min-width: 5em;
+        min-height: 2em;
+        top: 3em;
       }
       .dropButton:hover,
       .dropButton:focus {
@@ -41,8 +225,7 @@
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 5;
         text-align: left;
-        left: 385px;
-        top: 80px;
+        top: 5em;
       }
       .dropdown-content a {
         color: black;
@@ -55,73 +238,6 @@
       }
       .show {
         display: block;
-      }
-      .glcte {
-        position: relative;
-        font-size: 190%;
-        font-weight: bold;
-        left: 68%;
-      }
-      p.agrPara {
-        position: relative;
-        font-size: 20px;
-        left: 380px;
-        right: 380px;
-        width: 1150px;
-      }
-      h2.AgCareersHeader {
-        position: relative;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-        margin-top: 5px;
-        text-align: center;
-        font-weight: 1000;
-      }
-      .ASImage {
-        position: relative;
-        text-align: center;
-        left: 30%;
-        border: black;
-        width: 300px;
-        height: 400px;
-        min-width: 100px;
-        min-height: 100px;
-      }
-      .PSImage {
-        position: relative;
-        text-align: center;
-        left: 37%;
-        width: 300px;
-        height: 400px;
-      }
-      .ASImage,
-      .PSImage {
-        display: inline;
-      }
-      .as1,
-      .as2,
-      .hc1,
-      .hc2,
-      .mc {
-        position: relative;
-        left: 21%;
-        margin-bottom: 0%;
-        font-family: serif;
-        color: rgb(32, 156, 32);
-        font-weight: bold;
-        font-size: 30px;
-      }
-      .as1Para,
-      .as2Para,
-      .hc1Para,
-      .hc2Para,
-      .mcPara {
-        position: relative;
-        bottom: 10px;
-        left: 21%;
-        width: 1000px;
-        min-width: 300px;
-        font-size: 20px;
       }
     </style>
     <script>
@@ -143,119 +259,109 @@
     </script>
   </head>
   <body>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropButton">Menu</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="CSTOHome.html">Home</a>
-        <a href="WhyCTE.html">Why CTE?</a>
-        <a href="CTECareerPathways.html">CTE Career Pathways</a>
-        <a href="AgriculturalEducation.html">Agricultural Education</a>
-        <a href="BFM.html">Business, Finance, Marketing</a>
-        <a href="csIT.html">Computer Science & IT</a>
-        <a href="FCS.html">Family Consumer Science</a>
-        <a href="HSE.html">Health Science Education</a>
-        <a href="TTEI.html">Trade Technology Engineering Education</a>
-        <a href="CTEInternship.html">CTE Internship</a>
-        <a href="CTSO.html">CTSO</a>
+    <div id="grid">
+      <div id="menu">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropButton">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="CSTOHome.html">Home</a>
+            <a href="WhyCTE.html">Why CTE?</a>
+            <a href="CTECareerPathways.html">CTE Career Pathways</a>
+            <a href="AgriculturalEducation.html">Agricultural Education</a>
+            <a href="BFM.html">Business, Finance, Marketing</a>
+            <a href="csIT.html">Computer Science & IT</a>
+            <a href="FCS.html">Family Consumer Science</a>
+            <a href="HSE.html">Health Science Education</a>
+            <a href="TTEI.html">Trade Technology Engineering Education</a>
+            <a href="CTEInternship.html">CTE Internship</a>
+            <a href="CTSO.html">CTSO</a>
+          </div>
+        </div>
+      </div>
+      <div id="slogan"><div class="glcte">Green Level CTE</div></div>
+      <div id="title">
+        <div class="background">
+          <h1 class="mainHeader">
+            Agricultural Education <br />
+            <span>FFA CTSO</span>
+          </h1>
+        </div>
+      </div>
+      <div id="infoAndHeading">
+        <p class="agrPara">
+          Agricultural Education is a systematic program of instruction
+          available to students desiring to learn about the science, business,
+          and technology of plant and animal production and/or about the
+          environmental and natural resources systems.
+        </p>
+        <h2 class="agrHeader">
+          Ag Career Pathways and Courses at Green Level High School
+        </h2>
+      </div>
+      <div id="images">
+        <img
+          class="asImage"
+          src="images/animalScience.jpg"
+          alt="Animal Science Career Pathway"
+        />
+        <img
+          class="psImage"
+          src="images/plantSystems.jpg"
+          alt="Plant Systems Career Pathway"
+        />
+      </div>
+      <div id="mainContent">
+        <h3 class="as1">Animal Science I</h3>
+        <p class="as1P">
+          This course focuses on the basic scientific principles and processes
+          that are involved in animal physiology, breeding, nutrition, and care
+          in preparation for an animal science career major. Topics include
+          animal diseases, introduction to animal science, animal nutrition,
+          animal science issues, career opportunities, and animal evaluation.
+          <i>Honors Portfolio is required for Honors Credit</i>
+        </p>
+        <h3 class="as2">Animal Science II</h3>
+        <p class="as2P">
+          This course includes more advanced scientific principles and
+          communication skills and includes animal waste management, animal
+          science economics, decision making, and global concerns in the
+          industry, genetics, and breeding.
+          <i>Honors Portfolio is required for Honors Credit</i>
+        </p>
+        <h3 class="hc1">Horticulture I</h3>
+        <p class="hc1P">
+          This course provides instruction on the broad field of horticulture
+          with emphasis on the scientific and technical knowledge for a career
+          in horticulture. Topics in this course include plant growth and
+          development, plant nutrition, media selection, basic plant
+          identification, pest management, chemical disposal, customer
+          relations, and career opportunities.
+          <i>Honors Portfolio is required for Honors Credit</i>
+        </p>
+        <h3 class="hc2">Horticulture II</h3>
+        <p class="hc2P">
+          This course covers instruction that expands scientific knowledge and
+          skills to include more advanced scientific computations and
+          communication skills needed in the horticulture industry. Topics
+          include greenhouse plant production and management, bedding plant
+          production, watering systems, light effects, basic landscape design,
+          installation and maintenance, lawn and turf grass management, and
+          personal development.
+          <i>Honors Portfolio is required for Honors Credit</i>
+        </p>
+        <h3 class="mc">Microsoft Word and Powerpoint</h3>
+        <p class="mcP">
+          Students in the Microsoft Imagine Academy benefit from world-class
+          Microsoft curriculum and software tools to tackle real-world
+          challenges in the classroom environment. Students will learn to use
+          the current version of Microsoft Word interface, commands, and
+          features to create, enhance, customize, share and create complex
+          documents, and publish them. Students will learn to use the current
+          version of Microsoft PowerPoint interface, commands, and features to
+          create, enhance, customize, and deliver presentations.
+          <i>Honors Portfolio is required for Honors Credit</i>
+        </p>
       </div>
     </div>
-    <div class="glcte">Green Level CTE</div>
-    <div
-      id="background"
-      style="
-        position: relative;
-        width: auto;
-        height: 150px;
-        margin-right: 20%;
-        min-height: 100%;
-        max-height: 100%;
-        margin-top: 0%;
-        margin-left: 20%;
-        background: rgb(20, 3, 95);
-      "
-    >
-      <h1
-        class="mainHeader"
-        style="
-          position: absolute;
-          text-align: center;
-          width: auto;
-          height: 100px;
-          left: 10%;
-          right: 10%;
-          top: 0px;
-          font-size: 300%;
-          color: lightgrey;
-        "
-      >
-        Agricultural Education <br />
-        <em>FFA CTSO</em>
-      </h1>
-    </div>
-    <p class="agrPara">
-      Agricultural Education is a systematic program of instruction available to
-      students desiring to learn about the science, business, and technology of
-      plant and animal production and/or about the environmental and natural
-      resources systems.
-    </p>
-    <h2 class="AgCareersHeader">
-      Ag Career Pathways and Courses at Green Level High School
-    </h2>
-    <img
-      class="ASImage"
-      src="images/animalScience.jpg"
-      alt="Animal Science Career Pathway"
-    />
-    <img
-      class="PSImage"
-      src="images/plantSystems.jpg"
-      alt="Plant Systems Career Pathway"
-    />
-    <h3 class="as1">Animal Science I</h3>
-    <p class="as1Para">
-      This course focuses on the basic scientific principles and processes that
-      are involved in animal physiology, breeding, nutrition, and care in
-      preparation for an animal science career major. Topics include animal
-      diseases, introduction to animal science, animal nutrition, animal science
-      issues, career opportunities, and animal evaluation.
-      <i>Honors Portfolio is required for Honors Credit</i>
-    </p>
-    <h3 class="as2">Animal Science II</h3>
-    <p class="as2Para">
-      This course includes more advanced scientific principles and communication
-      skills and includes animal waste management, animal science economics,
-      decision making, and global concerns in the industry, genetics, and
-      breeding. <i>Honors Portfolio is required for Honors Credit</i>
-    </p>
-    <h3 class="hc1">Horticulture I</h3>
-    <p class="hc1Para">
-      This course provides instruction on the broad field of horticulture with
-      emphasis on the scientific and technical knowledge for a career in
-      horticulture. Topics in this course include plant growth and development,
-      plant nutrition, media selection, basic plant identification, pest
-      management, chemical disposal, customer relations, and career
-      opportunities. <i>Honors Portfolio is required for Honors Credit</i>
-    </p>
-    <h3 class="hc2">Horticulture II</h3>
-    <p class="hc2Para">
-      This course covers instruction that expands scientific knowledge and
-      skills to include more advanced scientific computations and communication
-      skills needed in the horticulture industry. Topics include greenhouse
-      plant production and management, bedding plant production, watering
-      systems, light effects, basic landscape design, installation and
-      maintenance, lawn and turf grass management, and personal development.
-      <i>Honors Portfolio is required for Honors Credit</i>
-    </p>
-    <h3 class="mc">Microsoft Word and Powerpoint</h3>
-    <p class="mcPara">
-      Students in the Microsoft Imagine Academy benefit from world-class
-      Microsoft curriculum and software tools to tackle real-world challenges in
-      the classroom environment. Students will learn to use the current version
-      of Microsoft Word interface, commands, and features to create, enhance,
-      customize, share and create complex documents, and publish them. Students
-      will learn to use the current version of Microsoft PowerPoint interface,
-      commands, and features to create, enhance, customize, and deliver
-      presentations. <i>Honors Portfolio is required for Honors Credit</i>
-    </p>
   </body>
 </html>
