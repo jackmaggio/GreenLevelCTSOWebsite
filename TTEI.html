@@ -14,35 +14,223 @@
         font-size: 30px;
         color: rgb(32, 156, 32);
       }
+      html,
+      body {
+        margin: 0;
+      }
+      #grid {
+        display: grid;
+        grid-row-gap: 0;
+        grid-column-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 6em 15em 3.5em 10em 47em 10em;
+        background-color: white;
+        width: 100%;
+      }
+      #menu {
+        text-align: left;
+        float: left;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #slogan {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #infoAndHeading {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      #image {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 5;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 27em;
+      }
+      #mainContent {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 5;
+        position: relative;
+        max-width: 25em;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 27em;
+      }
+      #newCourse {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 6;
+        text-align: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 27em;
+      }
       h1.mainHeader {
         text-align: center;
         color: lightgrey;
-        top: 100px;
-        margin-left: 540px;
+        bottom: 3.7em;
+        max-height: 3em;
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 60px;
         font-family: serif;
         z-index: 2;
-        position: absolute;
+        position: relative;
       }
+
       .background {
         background-color: rgb(20, 3, 95);
-        width: 1100px;
-        height: 200px;
+        width: 70em;
+        height: 14em;
+        margin-left: auto;
+        margin-right: auto;
         z-index: 1;
-        position: absolute;
-        margin-top: -210px;
-        margin-left: 380px;
+        position: relative;
+      }
+
+      .dropButton:hover,
+      .dropButton:focus {
+        background-color: blue;
+      }
+
+      .glcte {
+        position: relative;
+        top: 1.7em;
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .TTEIHeader {
+        position: relative;
+        text-align: center;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+        overflow: auto;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 10%;
+        padding-left: 10%;
+      }
+      .TEDImage {
+        height: 45em;
+        width: 32em;
+      }
+      .ted,
+      .td,
+      .ed,
+      .mc,
+      .excel {
+        color: rgb(32, 156, 32);
+        position: relative;
+        font-size: 30px;
+        text-align: left;
+      }
+
+      .tedP,
+      .tdP,
+      .edP,
+      .mcP,
+      .excelP {
+        font-size: 17px;
+        font-weight: bold;
+        color: darkslategray;
+        position: relative;
+        min-width: 25em;
+      }
+      .ted {
+        bottom: 1.2em;
+      }
+      .tedP {
+        bottom: 3.2em;
+        color: darkslategray;
+      }
+      .td {
+        bottom: 2em;
+      }
+      .tdP {
+        bottom: 4.5em;
+      }
+      .ed {
+        bottom: 3em;
+      }
+      .edP {
+        bottom: 6.5em;
+      }
+      .mc {
+        bottom: 4em;
+      }
+      .mcP {
+        bottom: 8.5em;
+      }
+      .newCourseHead {
+        color: rgb(13, 1, 121);
+        font-size: 25px;
+        position: relative;
+        font-weight: bold;
+        bottom: 1em;
+      }
+      .dda {
+        position: relative;
+        color: rgb(32, 156, 32);
+        font-size: 22px;
+        left: 0;
+        bottom: 2em;
+      }
+      .ddaP {
+        position: relative;
+        font-size: 17px;
+        max-width: 32em;
+        bottom: 3.7em;
+        text-align: left;
+        color: darkslategray;
+        font-weight: bold;
+      }
+      .TTEIPara {
+        position: relative;
+        font-size: 20px;
+        max-width: 55em;
+        text-align: left;
+        left: 0em;
       }
       .dropButton {
         background-color: black;
         color: white;
-        padding: 16px;
-        font-size: 16px;
+        font-size: 100%;
         border: none;
         cursor: pointer;
-        top: 60px;
-        margin-left: 380px;
-        position: absolute;
+        position: relative;
+        min-width: 5em;
+        min-height: 2em;
+        left: 0em;
+        top: 3em;
       }
       .dropButton:hover,
       .dropButton:focus {
@@ -53,12 +241,13 @@
         display: none;
         position: absolute;
         background-color: #f1f1f1;
-        min-width: 160px;
+        min-width: 10%;
+        max-width: 30%;
+        height: auto;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 5;
         text-align: left;
-        margin-left: 380px;
-        top: 110px;
+        top: 5em;
       }
       .dropdown-content a {
         color: black;
@@ -71,135 +260,6 @@
       }
       .show {
         display: block;
-      }
-      .glcte {
-        position: absolute;
-        right: 415px;
-        top: 75px;
-        font-size: 30px;
-        font-weight: bold;
-      }
-      p.TTEIPara {
-        margin-top: 330px;
-        margin-left: 400px;
-        margin-right: 400px;
-        text-align: left;
-        font-size: 20px;
-        padding-top: 5px;
-      }
-      h2.TTEIHeader {
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-        margin-left: 0px;
-        margin-right: 00px;
-        margin-top: 5px;
-        text-align: center;
-        font-weight: 1000;
-      }
-      .TEDImage {
-        height: 600px;
-        width: 500px;
-        margin-left: 400px;
-        padding-top: 10px;
-      }
-      .ted,
-      .td,
-      .ed,
-      .mc1 {
-        color: rgb(32, 156, 32);
-        font-size: 20px;
-      }
-      .ted {
-        position: absolute;
-        right: 493px;
-        top: 435px;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-      }
-      .tedP {
-        position: absolute;
-        right: 447px;
-        top: 485px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
-      }
-      .td {
-        position: absolute;
-        right: 680px;
-        top: 760px;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-      }
-      .tdP {
-        position: absolute;
-        right: 447px;
-        top: 810px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
-      }
-      .ed {
-        position: absolute;
-        right: 700px;
-        top: 1020px;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-      }
-      .edP {
-        position: absolute;
-        right: 447px;
-        top: 1070px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
-      }
-      .mc1 {
-        position: absolute;
-        right: 530px;
-        top: 1280px;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-      }
-      .mc1P {
-        position: absolute;
-        right: 447px;
-        top: 1330px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
-      }
-      .newCourseHead {
-        position: absolute;
-        right: 1080px;
-        top: 1110px;
-        color: rgb(13, 1, 121);
-        font-size: 25px;
-      }
-      .dda {
-        position: absolute;
-        right: 1100px;
-        top: 1140px;
-        color: rgb(32, 156, 32);
-        font-size: 22px;
-      }
-      .ddaP {
-        position: absolute;
-        right: 990px;
-        top: 1190px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
       }
     </style>
     <script>
@@ -221,102 +281,119 @@
     </script>
   </head>
   <body>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropButton">Menu</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="CSTOHome.html">Home</a>
-        <a href="WhyCTE.html">Why CTE?</a>
-        <a href="CTECareerPathways.html">CTE Career Pathways</a>
-        <a href="AgriculturalEducation.html">Agricultural Education</a>
-        <a href="BFM.html">Business, Finance, Marketing</a>
-        <a href="csIT.html">Computer Science & IT</a>
-        <a href="FCS.html">Family Consumer Science</a>
-        <a href="HSE.html">Health Science Education</a>
-        <a href="TTEI.html">Trade Technology Engineering Education</a>
-        <a href="CTEInternship.html">CTE Internship</a>
-        <a href="CTSO.html">CTSO</a>
+    <div id="grid">
+      <div id="menu">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropButton">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="CSTOHome.html">Home</a>
+            <a href="WhyCTE.html">Why CTE?</a>
+            <a href="CTECareerPathways.html">CTE Career Pathways</a>
+            <a href="AgriculturalEducation.html">Agricultural Education</a>
+            <a href="BFM.html">Business, Finance, Marketing</a>
+            <a href="csIT.html">Computer Science & IT</a>
+            <a href="FCS.html">Family Consumer Science</a>
+            <a href="HSE.html">Health Science Education</a>
+            <a href="TTEI.html">Trade Technology Engineering Education</a>
+            <a href="CTEInternship.html">CTE Internship</a>
+            <a href="CTSO.html">CTSO</a>
+          </div>
+        </div>
+      </div>
+      <div id="slogan"><div class="glcte">Green Level CTE</div></div>
+      <div id="title">
+        <div class="background"></div>
+        <h1 class="mainHeader">
+          <em>T</em>rade, <em>T</em>echnology, <em>E</em>ngineering<br />
+          and <em>I</em>ndustrial Education
+        </h1>
+      </div>
+      <div id="infoAndHeading">
+        <p class="TTEIPara">
+          ​Trade, Technology, Engineering, and Industrial Education (TTE&I)
+          programs provide students with the skills and conceptual knowledge
+          needed for careers in industry, engineering and design.
+        </p>
+        <h2 class="TTEIHeader">
+          TTE&I Career Pathways and Courses offered at Green Level High School
+        </h2>
+      </div>
+      <div id="image">
+        <img
+          class="TEDImage"
+          src="images/TEDImage.jpg"
+          alt="Technology Engineering and Design Career Pathway"
+        />
+      </div>
+      <div id="newCourse">
+        <h3 class="newCourseHead">New Course Offering Fall 2021</h3>
+        <h4 class="dda">Digital Design and Animation I</h4>
+        <p class="ddaP">
+          Digital Design and Animation I is an introductory level course
+          focusing on the concepts and tools used by digital artists in a wide
+          variety of creative careers including graphic design, film, and game
+          design. Students work with professional-grade creative software
+          packages to develop 2D and 3D digital graphics and audio/video media.
+          Students use Adobe CC Suite, and digital 3D modeling with 3DS Max to
+          build needed skills for subsequent courses.
+        </p>
+      </div>
+      <div id="mainContent">
+        <h3 class="ted">Technology Engineering and Design</h3>
+        <p class="tedP">
+          Technology Engineering and Design Technology Engineering and Design
+          prepares students to understand and apply technological concepts and
+          processes that are the cornerstone for the high school technology
+          program. Group and individual activities engage students in creating
+          ideas, developing innovations, and engineering practical solutions.
+          This course focuses on the three dimensions of technological
+          literacy—knowledge, ways of thinking and acting, and capabilities—with
+          the goal of students developing the characteristics of technologically
+          literate citizens. It employs teaching/learning strategies that enable
+          students to explore and deepen their understanding of "big ideas"
+          regarding technology and makes use of a variety of assessment
+          instruments to reveal the extent of understanding.
+        </p>
+        <h3 class="td">Technological Design</h3>
+        <p class="tdP">
+          This course continues to apply the skills, concepts, and principles of
+          design. The design fields of graphics, industrial design, and
+          architecture receive major emphasis. Engineering content and
+          professional practices are presented through practical application.
+          Working in design teams, student apply technology, science, and
+          mathematics concepts and skills to solve engineering and design
+          problems. Students will research, develop, test, and analyze
+          engineering designs using criteria such as design effectiveness,
+          public safety, human factors, and ethics.
+          <i>​Honors Portfolio is required for Honors credit​.</i>
+        </p>
+        <h3 class="ed">Engineering Design</h3>
+        <p class="edP">
+          Engineering Design Engineering Design focuses on how engineers apply
+          their creativity, resourcefulness, mathematical, scientific, and
+          technical knowledge and skills in the creation or refinement of
+          technological products/systems. A key approach will be the employment
+          of a sophisticated, sequential, and iterative design and development
+          process to solve authentic engineering tasks/problems. Students will
+          be challenged to participate as members of engineering teams within a
+          typical business organization. Independent and group work will be
+          reflective of authentic engineering projects found in the designed
+          world.
+          <i>​Honors Portfolio is required for Honors credit​.</i>
+        </p>
+        <h3 class="mc">Microsoft Word and Powerpoint</h3>
+        <p class="mcP">
+          Students in the Microsoft Imagine Academy benefit from world-class
+          Microsoft curriculum and software tools to tackle real-world
+          challenges in the classroom environment. Students will learn to use
+          the current version of Microsoft Word interface, commands, and
+          features to create, enhance, customize, share and create complex
+          documents, and publish them. Students will learn to use the current
+          version of Microsoft PowerPoint interface, commands, and features to
+          create, enhance, customize, and deliver presentations.
+          <i>​Honors Portfolio is required for Honors credit.</i>
+        </p>
       </div>
     </div>
-    <div class="glcte">Green Level CTE</div>
-    <div class="background"></div>
-    <h1 class="mainHeader">
-      <em>T</em>rade, <em>T</em>echnology, <em>E</em>ngineering<br />
-      and <em>I</em>ndustrial Education
-    </h1>
-    <p class="TTEIPara">
-      ​Trade, Technology, Engineering, and Industrial Education (TTE&I) programs
-      provide students with the skills and conceptual knowledge needed for
-      careers in industry, engineering and design.
-    </p>
-    <h2 class="TTEIHeader">
-      TTE&I Career Pathways and Courses offered at Green Level High School
-    </h2>
-    <img
-      class="TEDImage"
-      src="images/TEDImage.jpg"
-      alt="Technology Engineering and Design Career Pathway"
-    />
-    <h3 class="ted">Technology Engineering and Design</h3>
-    <p class="tedP">
-      Technology Engineering and Design Technology Engineering and Design
-      prepares students to understand and apply technological concepts and
-      processes that are the cornerstone for the high school technology program.
-      Group and individual activities engage students in creating ideas,
-      developing innovations, and engineering practical solutions. This course
-      focuses on the three dimensions of technological literacy—knowledge, ways
-      of thinking and acting, and capabilities—with the goal of students
-      developing the characteristics of technologically literate citizens. It
-      employs teaching/learning strategies that enable students to explore and
-      deepen their understanding of "big ideas" regarding technology and makes
-      use of a variety of assessment instruments to reveal the extent of
-      understanding.
-    </p>
-    <h3 class="td">Technological Design</h3>
-    <p class="tdP">
-      This course continues to apply the skills, concepts, and principles of
-      design. The design fields of graphics, industrial design, and architecture
-      receive major emphasis. Engineering content and professional practices are
-      presented through practical application. Working in design teams, student
-      apply technology, science, and mathematics concepts and skills to solve
-      engineering and design problems. Students will research, develop, test,
-      and analyze engineering designs using criteria such as design
-      effectiveness, public safety, human factors, and ethics.
-      <i>​Honors Portfolio is required for Honors credit​.</i>
-    </p>
-    <h3 class="ed">Engineering Design</h3>
-    <p class="edP">
-      Engineering Design Engineering Design focuses on how engineers apply their
-      creativity, resourcefulness, mathematical, scientific, and technical
-      knowledge and skills in the creation or refinement of technological
-      products/systems. A key approach will be the employment of a
-      sophisticated, sequential, and iterative design and development process to
-      solve authentic engineering tasks/problems. Students will be challenged to
-      participate as members of engineering teams within a typical business
-      organization. Independent and group work will be reflective of authentic
-      engineering projects found in the designed world.
-      <i>​Honors Portfolio is required for Honors credit​.</i>
-    </p>
-    <h3 class="mc1">Microsoft Word and Powerpoint</h3>
-    <p class="mc1P">
-      Students in the Microsoft Imagine Academy benefit from world-class
-      Microsoft curriculum and software tools to tackle real-world challenges in
-      the classroom environment. Students will learn to use the current version
-      of Microsoft Word interface, commands, and features to create, enhance,
-      customize, share and create complex documents, and publish them. Students
-      will learn to use the current version of Microsoft PowerPoint interface,
-      commands, and features to create, enhance, customize, and deliver
-      presentations. <i>​Honors Portfolio is required for Honors credit.</i>
-    </p>
-    <h3 class="newCourseHead">New Course Offering Fall 2021</h3>
-    <h4 class="dda">Digital Design and Animation I</h4>
-    <p class="ddaP">
-      Digital Design and Animation I is an introductory level course focusing on
-      the concepts and tools used by digital artists in a wide variety of
-      creative careers including graphic design, film, and game design. Students
-      work with professional-grade creative software packages to develop 2D and
-      3D digital graphics and audio/video media. Students use Adobe CC Suite,
-      and digital 3D modeling with 3DS Max to build needed skills for subsequent
-      courses.
-    </p>
   </body>
 </html>
