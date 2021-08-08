@@ -5,8 +5,106 @@
     <title>CTE Career Pathways</title>
     <style>
       em {
-        color: limegreen;
+        color: rgb(32, 156, 32);
         font-style: normal;
+        font-size: 70px;
+      }
+      span.green {
+        font-size: 30px;
+        color: rgb(32, 156, 32);
+      }
+      span.darkBlue {
+        font-size: 30px;
+        color: rgb(45, 0, 129);
+        font-weight: bold;
+      }
+      html,
+      body {
+        margin: 0;
+      }
+      #grid {
+        display: grid;
+        grid-row-gap: 0;
+        grid-column-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 5em 15em 2em 10em;
+        background-color: white;
+        width: 100%;
+      }
+      #menu {
+        text-align: left;
+        float: left;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #slogan {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 0%;
+      }
+      #title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #mainContent {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      h1.mainHeader {
+        text-align: center;
+        color: lightgrey;
+        top: 1em;
+        max-height: 3em;
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 60px;
+        font-family: serif;
+        z-index: 2;
+        position: relative;
+      }
+      .background {
+        background-color: rgb(20, 3, 95);
+        width: 70em;
+        height: 14em;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+        position: relative;
+      }
+
+      .dropButton:hover,
+      .dropButton:focus {
+        background-color: blue;
+      }
+
+      .glcte {
+        position: relative;
+        top: 1.7em;
+        font-size: 2em;
+        font-weight: bold;
+        width: 10em;
+      }
+      .careerParagraph {
+        position: relative;
+        font-size: 20px;
+        width: 56em;
+        text-align: left;
       }
       .dropButton {
         background-color: black;
@@ -15,14 +113,9 @@
         border: none;
         cursor: pointer;
         position: relative;
-        left: 20%;
-        top: 30px;
-        min-width: 100px;
-        height: 40px;
-      }
-      .dropButton,
-      .glcte {
-        display: inline-block;
+        min-width: 5em;
+        height: 3em;
+        top: 3em;
       }
       .dropButton:hover,
       .dropButton:focus {
@@ -39,8 +132,7 @@
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 5;
         text-align: left;
-        left: 385px;
-        top: 80px;
+        top: 5.5em;
       }
       .dropdown-content a {
         color: black;
@@ -53,32 +145,6 @@
       }
       .show {
         display: block;
-      }
-      .glcte {
-        position: relative;
-        font-size: 190%;
-        font-weight: bold;
-        left: 68%;
-      }
-      p.careerParagraph {
-        position: relative;
-        font-family: serif;
-        font-size: 20px;
-        text-align: left;
-        margin-top: 1%;
-        margin-left: 20%;
-        min-width: 59%;
-        max-width: 59%;
-        height: auto;
-      }
-      img.careersImage {
-        position: relative;
-        margin-top: 2%;
-        margin-left: 28%;
-        text-align: center;
-        min-width: 45%;
-        max-width: 45%;
-        height: auto;
       }
     </style>
     <script>
@@ -100,66 +166,45 @@
     </script>
   </head>
   <body>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropButton">Menu</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="CSTOHome.html">Home</a>
-        <a href="WhyCTE.html">Why CTE?</a>
-        <a href="CTECareerPathways.html">CTE Career Pathways</a>
-        <a href="AgriculturalEducation.html">Agricultural Education</a>
-        <a href="BFM.html">Business, Finance, Marketing</a>
-        <a href="csIT.html">Computer Science & IT</a>
-        <a href="FCS.html">Family Consumer Science</a>
-        <a href="HSE.html">Health Science Education</a>
-        <a href="TTEI.html">Trade Technology Engineering Education</a>
-        <a href="CTEInternship.html">CTE Internship</a>
-        <a href="CTSO.html">CTSO</a>
+    <div id="grid">
+      <div id="menu">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropButton">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="CSTOHome.html">Home</a>
+            <a href="WhyCTE.html">Why CTE?</a>
+            <a href="CTECareerPathways.html">CTE Career Pathways</a>
+            <a href="AgriculturalEducation.html">Agricultural Education</a>
+            <a href="BFM.html">Business, Finance, Marketing</a>
+            <a href="csIT.html">Computer Science & IT</a>
+            <a href="FCS.html">Family Consumer Science</a>
+            <a href="HSE.html">Health Science Education</a>
+            <a href="TTEI.html">Trade Technology Engineering Education</a>
+            <a href="CTEInternship.html">CTE Internship</a>
+            <a href="CTSO.html">CTSO</a>
+          </div>
+        </div>
+      </div>
+      <div id="slogan"><div class="glcte">Green Level CTE</div></div>
+      <div id="title">
+        <div class="background">
+          <h1 class="mainHeader"><em>CTE</em> Career Pathways</h1>
+        </div>
+      </div>
+      <div id="mainContent">
+        <p class="careerParagraph">
+          Career Pathways™ provide students the opportunity to discover their
+          interests and their passions, and empowers them to choose the
+          educational pathway that can lead to success in high school, college
+          and career.​ Here at Green Level high school we currently have nine
+          CTE Career Pathways for students to explore.
+        </p>
+        <img
+          class="careersImage"
+          src="images/careerPathwaysImage.jpg"
+          alt="CTE Career Paths"
+        />
       </div>
     </div>
-    <div class="glcte">Green Level CTE</div>
-    <div></div>
-    <div
-      id="background"
-      style="
-        position: relative;
-        width: auto;
-        height: 150px;
-        margin-right: 20%;
-        min-height: 100%;
-        max-height: 100%;
-        margin-top: 0%;
-        margin-left: 20%;
-        background: rgb(20, 3, 95);
-      "
-    >
-      <h1
-        class="mainHeader"
-        style="
-          position: absolute;
-          text-align: center;
-          width: auto;
-          height: 100px;
-          left: 10%;
-          right: 10%;
-          margin-top: 4%;
-          font-size: 300%;
-          color: lightgrey;
-        "
-      >
-        <em>CTE</em> Career Pathways
-      </h1>
-    </div>
-    <p class="careerParagraph">
-      Career Pathways™ provide students the opportunity to discover their
-      interests and their passions, and empowers them to choose the educational
-      pathway that can lead to success in high school, college and career.​ Here
-      at Green Level high school we currently have nine CTE Career Pathways for
-      students to explore.
-    </p>
-    <img
-      class="careersImage"
-      src="images/careerPathwaysImage.jpg"
-      alt="CTE Career Paths"
-    />
   </body>
 </html>
