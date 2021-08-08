@@ -8,37 +8,229 @@
       em {
         color: rgb(32, 156, 32);
         font-style: normal;
+        font-size: 70px;
+      }
+      span {
         font-size: 30px;
+        color: rgb(32, 156, 32);
+      }
+      html,
+      body {
+        margin: 0;
+      }
+      #grid {
+        display: grid;
+        grid-row-gap: 0;
+        grid-column-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 6em 15em 5em 10em 27em 10em;
+        background-color: white;
+        width: 100%;
+      }
+      #menu {
+        text-align: left;
+        float: left;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #slogan {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #infoAndHeading {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      #images {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 5;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #mainContent {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 6;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
       }
       h1.mainHeader {
         text-align: center;
         color: lightgrey;
-        top: 100px;
-        margin-left: 640px;
+        bottom: 3.7em;
+        max-height: 3em;
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 60px;
         font-family: serif;
         z-index: 2;
-        position: absolute;
+        position: relative;
       }
       .background {
         background-color: rgb(20, 3, 95);
-        width: 1100px;
-        height: 200px;
+        width: 70em;
+        height: 14em;
+        margin-left: auto;
+        margin-right: auto;
         z-index: 1;
-        position: absolute;
-        margin-top: -205px;
-        margin-left: 380px;
+        position: relative;
+      }
+
+      .dropButton:hover,
+      .dropButton:focus {
+        background-color: blue;
+      }
+
+      .glcte {
+        position: relative;
+        top: 1.7em;
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .csITHeader {
+        position: relative;
+        text-align: center;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+        overflow: auto;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 7%;
+        padding-left: 7%;
+        min-width: 20em;
+        max-height: 3em;
+      }
+      .AdobeImage {
+        height: 25em;
+        width: 20em;
+        padding-right: 2.5em;
+      }
+      .APCompSciImage {
+        height: 25em;
+        width: 20em;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+      }
+      .PythonImage {
+        height: 25em;
+        width: 20em;
+        padding-left: 2.5em;
+      }
+      .visDesign,
+      .vidDesign,
+      .APCSP,
+      .APCSA,
+      .Python1,
+      .Python2,
+      .mc,
+      .excel {
+        color: rgb(32, 156, 32);
+        position: relative;
+        font-size: 30px;
+        text-align: left;
+      }
+
+      .visDesignPara,
+      .vidDesignPara,
+      .APCSPPara,
+      .APCSAPara,
+      .Python1Para,
+      .Python2Para,
+      .mcPara,
+      .excelPara {
+        font-size: 17px;
+        font-weight: bold;
+        color: darkslategray;
+        position: relative;
+        padding-left: 0;
+        max-width: 67em;
+      }
+      .visDesign {
+        bottom: 1.2em;
+      }
+      .visDesignPara {
+        bottom: 3.2em;
+      }
+      .vidDesign {
+        bottom: 2em;
+      }
+      .vidDesignPara {
+        bottom: 4.5em;
+      }
+      .APCSP {
+        bottom: 3em;
+      }
+      .APCSPPara {
+        bottom: 6.5em;
+      }
+      .APCSA {
+        bottom: 4em;
+      }
+      .APCSAPara {
+        bottom: 8.5em;
+      }
+      .Python1 {
+        bottom: 5.2em;
+      }
+      .Python1Para {
+        bottom: 10.5em;
+      }
+      .Python2 {
+        bottom: 6.2em;
+      }
+      .Python2Para {
+        bottom: 12.5em;
+      }
+      .mc {
+        bottom: 7.2em;
+      }
+      .mcPara {
+        bottom: 14.5em;
+      }
+
+      .csITPara {
+        position: relative;
+        font-size: 20px;
+        width: 56em;
+        text-align: left;
       }
       .dropButton {
         background-color: black;
         color: white;
-        padding: 16px;
-        font-size: 16px;
+        font-size: 100%;
         border: none;
         cursor: pointer;
-        top: 60px;
-        margin-left: 380px;
-        position: absolute;
+        position: relative;
+        min-width: 5em;
+        min-height: 2em;
+        top: 3em;
       }
       .dropButton:hover,
       .dropButton:focus {
@@ -49,12 +241,13 @@
         display: none;
         position: absolute;
         background-color: #f1f1f1;
-        min-width: 160px;
+        min-width: 10%;
+        max-width: 30%;
+        height: auto;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 5;
         text-align: left;
-        margin-left: 380px;
-        top: 110px;
+        top: 5em;
       }
       .dropdown-content a {
         color: black;
@@ -67,76 +260,6 @@
       }
       .show {
         display: block;
-      }
-      .glcte {
-        position: absolute;
-        right: 415px;
-        top: 75px;
-        font-size: 30px;
-        font-weight: bold;
-      }
-      p.csITPara {
-        margin-top: 320px;
-        margin-left: 400px;
-        margin-right: 400px;
-        padding-top: 10px;
-        text-align: left;
-        font-size: 20px;
-      }
-      h2.csITHeader {
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-        margin-top: 10px;
-        text-align: center;
-        margin-right: 20px;
-      }
-      .AdobeImage {
-        text-align: center;
-        margin-left: 500px;
-        margin-right: 130px;
-        padding-right: 10px;
-        border: black;
-        width: 300px;
-        height: 400px;
-      }
-      .APCompSciImage {
-        margin-right: 130px;
-      }
-      .AdobeImage,
-      .APCompSciImage,
-      .PythonImage {
-        display: inline;
-        width: 200px;
-        height: 300px;
-        float: center;
-      }
-      .visDesign,
-      .vidDesign,
-      .APCSP,
-      .APCSA,
-      .Python1,
-      .Python2,
-      .mc,
-      .excel {
-        margin-left: 400px;
-        font-family: serif;
-        color: rgb(32, 156, 32);
-        font-weight: bold;
-        font-size: 30px;
-        margin-bottom: 0px;
-      }
-      .visDesignPara,
-      .vidDesignPara,
-      .APCSPPara,
-      .APCSAPara,
-      .Python1Para,
-      .Python2Para,
-      .mcPara,
-      .excelPara {
-        margin-left: 400px;
-        margin-right: 400px;
-        margin-top: 4px;
-        font-size: 20px;
       }
     </style>
     <script>
@@ -158,144 +281,158 @@
     </script>
   </head>
   <body>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropButton">Menu</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="CSTOHome.html">Home</a>
-        <a href="WhyCTE.html">Why CTE?</a>
-        <a href="CTECareerPathways.html">CTE Career Pathways</a>
-        <a href="AgriculturalEducation.html">Agricultural Education</a>
-        <a href="BFM.html">Business, Finance, Marketing</a>
-        <a href="csIT.html">Computer Science & IT</a>
-        <a href="FCS.html">Family Consumer Science</a>
-        <a href="HSE.html">Health Science Education</a>
-        <a href="TTEI.html">Trade Technology Engineering Education</a>
-        <a href="CTEInternship.html">CTE Internship</a>
-        <a href="CTSO.html">CTSO</a>
+    <div id="grid">
+      <div id="menu">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropButton">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="CSTOHome.html">Home</a>
+            <a href="WhyCTE.html">Why CTE?</a>
+            <a href="CTECareerPathways.html">CTE Career Pathways</a>
+            <a href="AgriculturalEducation.html">Agricultural Education</a>
+            <a href="BFM.html">Business, Finance, Marketing</a>
+            <a href="csIT.html">Computer Science & IT</a>
+            <a href="FCS.html">Family Consumer Science</a>
+            <a href="HSE.html">Health Science Education</a>
+            <a href="TTEI.html">Trade Technology Engineering Education</a>
+            <a href="CTEInternship.html">CTE Internship</a>
+            <a href="CTSO.html">CTSO</a>
+          </div>
+        </div>
+      </div>
+      <div id="slogan"><div class="glcte">Green Level CTE</div></div>
+      <div id="title">
+        <div class="background"></div>
+        <h1 class="mainHeader">
+          Computer Science & IT<br />
+          <span>FBLA CTSO</span>
+        </h1>
+      </div>
+      <div id="infoAndHeading">
+        <p class="csITPara">
+          ​Computer Science and Information Technology (CSIT) is focused on
+          building linkages in information technology occupations for entry
+          level, technical and professional careers related to the design,
+          development, support and management of hardware, software, multimedia
+          and systems integration services. Students will demonstrate knowledge
+          of and proficiency in data representation and abstraction; effectively
+          design, develop, and test algorithms; demonstrate knowledge of digital
+          devices, systems and networks; and demonstrate an understanding of the
+          role computer science plays and its impact in the modern world.
+        </p>
+        <h2 class="csITHeader">
+          CS&IT Career Pathways and Courses offered at Green Level High School
+        </h2>
+      </div>
+      <div id="images">
+        <img
+          class="AdobeImage"
+          src="images/AdobeAcademyCareer.jpg"
+          alt="Adobe Academy Career Pathway"
+        />
+        <img
+          class="APCompSciImage"
+          src="images/APCompSci.jpg"
+          alt="AP Computer Science Career Pathway"
+        />
+        <img
+          class="PythonImage"
+          src="images/Python.jpg"
+          alt="Python Programming Career Pathway"
+        />
+      </div>
+      <div id="mainContent">
+        <h3 class="visDesign">Adobe Visual Design</h3>
+        <p class="visDesignPara">
+          This course is a project-based course that develops ICT, career, and
+          communication skills in print and graphic design using Adobe tools.
+          This course is aligned to Adobe Photoshop, InDesign, and Illustrator
+          certification.
+          <i>Honors Portfolio is required for Honors Credit</i>
+        </p>
+        <h3 class="vidDesign">Adobe Video Design</h3>
+        <p class="vidDesignPara">
+          This course is a project-based video course that develops career and
+          communication skills in video production using Adobe tools. This
+          course is aligned to Adobe Premiere certification.
+          <i>Honors Portfolio is required for Honors Credit</i>
+        </p>
+        <h3 class="APCSP">AP Computer Science Principles</h3>
+        <p class="APCSPPara">
+          In this course, students will develop computational thinking vital for
+          success across all disciplines, such as using computational tools to
+          analyze and study data and working with large data sets to analyze,
+          visualize, and draw conclusions from trends. The course is unique in
+          its focus on fostering student creativity. Students are encouraged to
+          apply creative processes when developing computational artifacts and
+          to think creatively while using computer software and other technology
+          to explore questions that interest them. They will also develop
+          effective communication and collaboration skills, working individually
+          and collaboratively to solve problems, and discussing and writing
+          about the importance of these problems and the impacts to their
+          community, society, and the world.
+        </p>
+        <h3 class="APCSA">AP Computer Science A</h3>
+        <p class="APCSAPara">
+          This is a college-level introductory course in computer science.
+          Because the design and implementation of computer programs to solve
+          problems involve skills that are fundamental to the study of computer
+          science, a large part of the course is built around the development of
+          computer programs that correctly solve a given problem. The design and
+          implementation of computer programs is used as a context for
+          introducing other important aspects of computer science, including the
+          development and analysis of algorithms, the development and use of
+          fundamental data structures, the study of standard algorithms and
+          typical applications, and the use of logic and formal methods. The
+          course is designed to be the equivalent of a first semester college
+          course in computer science.
+        </p>
+        <h3 class="Python1">Python Programming I</h3>
+        <p class="Python1Para">
+          ​This course is designed to introduce Python as a beginning course
+          (not intended for experienced programmers). The course is designed for
+          students to learn and practice coding in an online environment that
+          requires only a modern web browser and Internet connection. The course
+          includes video content, practice labs, and coding projects.
+        </p>
+        <h3 class="Python2">Python Programming II</h3>
+        <p class="Python2Para">
+          This course will prepare students for jobs and careers connected with
+          widely understood software development, which includes not only
+          creating the code itself as a junior developer, but also computer
+          systems design and software testing. Students will be guided to a
+          level of Python programming knowledge which will allow them to design,
+          write, debug, and run programs encoded in the Python language, and to
+          understand the basic concepts of software development technology. In
+          addition, students will learn IoT (Internet of Things) skills which
+          can help transform any business in any industry, from manufacturing to
+          saving endangered species. Students will apply basic programming
+          (using Python) to support IoT devices.
+          <i>Honors Level</i>
+        </p>
+        <h3 class="mc">Microsoft Word and Powerpoint</h3>
+        <p class="mcPara">
+          Students in the Microsoft Imagine Academy benefit from world-class
+          Microsoft curriculum and software tools to tackle real-world
+          challenges in the classroom environment. Students will learn to use
+          the current version of Microsoft Word interface, commands, and
+          features to create, enhance, customize, share and create complex
+          documents, and publish them. Students will learn to use the current
+          version of Microsoft PowerPoint interface, commands, and features to
+          create, enhance, customize, and deliver presentations.
+          <i>Honors Portfolio is required for Honors Credit</i>
+        </p>
+        <h3 class="excel">Microsoft Excel</h3>
+        <p class="excelPara">
+          Students in Microsoft Imagine Academies benefit from world-class
+          Microsoft curriculum and cutting-edge software tools to tackle
+          real-world challenges in the classroom environment. This class is
+          designed to help you use the newest version of Microsoft Excel
+          interface, commands, and features to present, analyze, and manipulate
+          various types of data. Students will learn to manage workbooks as well
+          as how to manage, manipulate, and format data. <i>Honors Level</i>
+        </p>
       </div>
     </div>
-    <div class="glcte">Green Level CTE</div>
-    <div class="background"></div>
-    <h1 class="mainHeader">
-      Computer Science & IT<br />
-      <em>FBLA CTSO</em>
-    </h1>
-    <p class="csITPara">
-      ​Computer Science and Information Technology (CSIT) is focused on building
-      linkages in information technology occupations for entry level, technical
-      and professional careers related to the design, development, support and
-      management of hardware, software, multimedia and systems integration
-      services. Students will demonstrate knowledge of and proficiency in data
-      representation and abstraction; effectively design, develop, and test
-      algorithms; demonstrate knowledge of digital devices, systems and
-      networks; and demonstrate an understanding of the role computer science
-      plays and its impact in the modern world.
-    </p>
-    <h2 class="csITHeader">
-      CS&IT Career Pathways and Courses offered at Green Level High School
-    </h2>
-    <img
-      class="AdobeImage"
-      src="images/AdobeAcademyCareer.jpg"
-      alt="Adobe Academy Career Pathway"
-    />
-    <img
-      class="APCompSciImage"
-      src="images/APCompSci.jpg"
-      alt="AP Computer Science Career Pathway"
-    />
-    <img
-      class="PythonImage"
-      src="images/Python.jpg"
-      alt="Python Programming Career Pathway"
-    />
-    <h3 class="visDesign">Adobe Visual Design</h3>
-    <p class="visDesignPara">
-      This course is a project-based course that develops ICT, career, and
-      communication skills in print and graphic design using Adobe tools. This
-      course is aligned to Adobe Photoshop, InDesign, and Illustrator
-      certification.
-      <i>Honors Portfolio is required for Honors Credit</i>
-    </p>
-    <h3 class="vidDesign">Adobe Video Design</h3>
-    <p class="vidDesignPara">
-      This course is a project-based video course that develops career and
-      communication skills in video production using Adobe tools. This course is
-      aligned to Adobe Premiere certification.
-      <i>Honors Portfolio is required for Honors Credit</i>
-    </p>
-    <h3 class="APCSP">AP Computer Science Principles</h3>
-    <p class="APCSPPara">
-      In this course, students will develop computational thinking vital for
-      success across all disciplines, such as using computational tools to
-      analyze and study data and working with large data sets to analyze,
-      visualize, and draw conclusions from trends. The course is unique in its
-      focus on fostering student creativity. Students are encouraged to apply
-      creative processes when developing computational artifacts and to think
-      creatively while using computer software and other technology to explore
-      questions that interest them. They will also develop effective
-      communication and collaboration skills, working individually and
-      collaboratively to solve problems, and discussing and writing about the
-      importance of these problems and the impacts to their community, society,
-      and the world.
-    </p>
-    <h3 class="APCSA">AP Computer Science A</h3>
-    <p class="APCSAPara">
-      This is a college-level introductory course in computer science. Because
-      the design and implementation of computer programs to solve problems
-      involve skills that are fundamental to the study of computer science, a
-      large part of the course is built around the development of computer
-      programs that correctly solve a given problem. The design and
-      implementation of computer programs is used as a context for introducing
-      other important aspects of computer science, including the development and
-      analysis of algorithms, the development and use of fundamental data
-      structures, the study of standard algorithms and typical applications, and
-      the use of logic and formal methods. The course is designed to be the
-      equivalent of a first semester college course in computer science.
-    </p>
-    <h3 class="Python1">Python Programming I</h3>
-    <p class="Python1Para">
-      ​This course is designed to introduce Python as a beginning course (not
-      intended for experienced programmers). The course is designed for students
-      to learn and practice coding in an online environment that requires only a
-      modern web browser and Internet connection. The course includes video
-      content, practice labs, and coding projects.
-    </p>
-    <h3 class="Python2">Python Programming II</h3>
-    <p class="Python2Para">
-      This course will prepare students for jobs and careers connected with
-      widely understood software development, which includes not only creating
-      the code itself as a junior developer, but also computer systems design
-      and software testing. Students will be guided to a level of Python
-      programming knowledge which will allow them to design, write, debug, and
-      run programs encoded in the Python language, and to understand the basic
-      concepts of software development technology. In addition, students will
-      learn IoT (Internet of Things) skills which can help transform any
-      business in any industry, from manufacturing to saving endangered species.
-      Students will apply basic programming (using Python) to support IoT
-      devices.
-      <i>Honors Level</i>
-    </p>
-    <h3 class="mc">Microsoft Word and Powerpoint</h3>
-    <p class="mcPara">
-      Students in the Microsoft Imagine Academy benefit from world-class
-      Microsoft curriculum and software tools to tackle real-world challenges in
-      the classroom environment. Students will learn to use the current version
-      of Microsoft Word interface, commands, and features to create, enhance,
-      customize, share and create complex documents, and publish them. Students
-      will learn to use the current version of Microsoft PowerPoint interface,
-      commands, and features to create, enhance, customize, and deliver
-      presentations. <i>Honors Portfolio is required for Honors Credit</i>
-    </p>
-    <h3 class="excel">Microsoft Excel</h3>
-    <p class="excelPara">
-      Students in Microsoft Imagine Academies benefit from world-class Microsoft
-      curriculum and cutting-edge software tools to tackle real-world challenges
-      in the classroom environment. This class is designed to help you use the
-      newest version of Microsoft Excel interface, commands, and features to
-      present, analyze, and manipulate various types of data. Students will
-      learn to manage workbooks as well as how to manage, manipulate, and format
-      data. <i>Honors Level</i>
-    </p>
   </body>
 </html>
