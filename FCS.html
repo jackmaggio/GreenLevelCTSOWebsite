@@ -14,35 +14,191 @@
         font-size: 30px;
         color: rgb(32, 156, 32);
       }
+      html,
+      body {
+        margin: 0;
+      }
+      #grid {
+        display: grid;
+        grid-row-gap: 0;
+        grid-column-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 6em 15em 3.5em 10em 47em 10em;
+        background-color: white;
+        width: 100%;
+      }
+      #menu {
+        text-align: left;
+        float: left;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #slogan {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #infoAndHeading {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      #image {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 5;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 27em;
+      }
+      #mainContent {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 5;
+        position: relative;
+        max-width: 25em;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 27em;
+      }
+      #newCourse {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 6;
+        text-align: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 27em;
+      }
       h1.mainHeader {
         text-align: center;
         color: lightgrey;
-        top: 100px;
-        margin-left: 580px;
+        bottom: 3.7em;
+        max-height: 3em;
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 60px;
         font-family: serif;
         z-index: 2;
-        position: absolute;
+        position: relative;
       }
+
       .background {
         background-color: rgb(20, 3, 95);
-        width: 1100px;
-        height: 200px;
+        width: 70em;
+        height: 14em;
+        margin-left: auto;
+        margin-right: auto;
         z-index: 1;
-        position: absolute;
-        margin-top: -210px;
-        margin-left: 380px;
+        position: relative;
+      }
+
+      .dropButton:hover,
+      .dropButton:focus {
+        background-color: blue;
+      }
+
+      .glcte {
+        position: relative;
+        top: 1.7em;
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .fcsHeader {
+        position: relative;
+        text-align: center;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+        overflow: auto;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 10%;
+        padding-left: 10%;
+      }
+      .fcsImage {
+        height: 45em;
+        width: 32em;
+      }
+      .fn1,
+      .fn2,
+      .mc {
+        color: rgb(32, 156, 32);
+        position: relative;
+        font-size: 30px;
+        text-align: left;
+      }
+
+      .fn1P,
+      .fn2P,
+      .mcP {
+        font-size: 17px;
+        font-weight: bold;
+        color: darkslategray;
+        position: relative;
+        min-width: 25em;
+      }
+      .fn1 {
+        bottom: 1.2em;
+      }
+      .fn1P {
+        bottom: 3.2em;
+        color: darkslategray;
+      }
+      .fn2 {
+        bottom: 2em;
+      }
+      .fn2P {
+        bottom: 4.5em;
+      }
+      .mc {
+        bottom: 3em;
+      }
+      .mcP {
+        bottom: 6.5em;
+      }
+
+      .fcsPara {
+        position: relative;
+        font-size: 20px;
+        max-width: 55em;
+        text-align: left;
+        left: 0em;
       }
       .dropButton {
         background-color: black;
         color: white;
-        padding: 16px;
-        font-size: 16px;
+        font-size: 100%;
         border: none;
         cursor: pointer;
-        top: 60px;
-        margin-left: 380px;
-        position: absolute;
+        position: relative;
+        min-width: 5em;
+        min-height: 2em;
+        left: 0em;
+        top: 3em;
       }
       .dropButton:hover,
       .dropButton:focus {
@@ -53,12 +209,13 @@
         display: none;
         position: absolute;
         background-color: #f1f1f1;
-        min-width: 160px;
+        min-width: 10%;
+        max-width: 30%;
+        height: auto;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 5;
         text-align: left;
-        margin-left: 380px;
-        top: 110px;
+        top: 5em;
       }
       .dropdown-content a {
         color: black;
@@ -71,91 +228,6 @@
       }
       .show {
         display: block;
-      }
-      .glcte {
-        position: absolute;
-        right: 415px;
-        top: 75px;
-        font-size: 30px;
-        font-weight: bold;
-      }
-      p.fcsPara {
-        margin-top: 330px;
-        margin-left: 400px;
-        margin-right: 400px;
-        text-align: left;
-        font-size: 20px;
-      }
-      h2.fcsHeader {
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-        margin-left: 0px;
-        margin-right: 00px;
-        margin-top: 5px;
-        text-align: center;
-        font-weight: 1000;
-      }
-      .FCSImage {
-        height: 600px;
-        width: 500px;
-        margin-left: 400px;
-      }
-      .FN1,
-      .FN2,
-      .mc1 {
-        color: rgb(32, 156, 32);
-        font-size: 20px;
-      }
-      .FN1 {
-        position: absolute;
-        right: 680px;
-        top: 485px;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-      }
-      .FN1P {
-        position: absolute;
-        right: 447px;
-        top: 535px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
-      }
-      .FN2 {
-        position: absolute;
-        right: 670px;
-        top: 660px;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-      }
-      .FN2P {
-        position: absolute;
-        right: 447px;
-        top: 710px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
-      }
-      .mc1 {
-        position: absolute;
-        right: 530px;
-        top: 860px;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-      }
-      .mc1P {
-        position: absolute;
-        right: 447px;
-        top: 910px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
       }
     </style>
     <script>
@@ -177,76 +249,91 @@
     </script>
   </head>
   <body>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropButton">Menu</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="CSTOHome.html">Home</a>
-        <a href="WhyCTE.html">Why CTE?</a>
-        <a href="CTECareerPathways.html">CTE Career Pathways</a>
-        <a href="AgriculturalEducation.html">Agricultural Education</a>
-        <a href="BFM.html">Business, Finance, Marketing</a>
-        <a href="csIT.html">Computer Science & IT</a>
-        <a href="FCS.html">Family Consumer Science</a>
-        <a href="HSE.html">Health Science Education</a>
-        <a href="TTEI.html">Trade Technology Engineering Education</a>
-        <a href="CTEInternship.html">CTE Internship</a>
-        <a href="CTSO.html">CTSO</a>
+    <div id="grid">
+      <div id="menu">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropButton">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="CSTOHome.html">Home</a>
+            <a href="WhyCTE.html">Why CTE?</a>
+            <a href="CTECareerPathways.html">CTE Career Pathways</a>
+            <a href="AgriculturalEducation.html">Agricultural Education</a>
+            <a href="BFM.html">Business, Finance, Marketing</a>
+            <a href="csIT.html">Computer Science & IT</a>
+            <a href="FCS.html">Family Consumer Science</a>
+            <a href="HSE.html">Health Science Education</a>
+            <a href="TTEI.html">Trade Technology Engineering Education</a>
+            <a href="CTEInternship.html">CTE Internship</a>
+            <a href="CTSO.html">CTSO</a>
+          </div>
+        </div>
+      </div>
+      <div id="slogan"><div class="glcte">Green Level CTE</div></div>
+      <div id="title">
+        <div class="background"></div>
+        <h1 class="mainHeader">
+          <em>F</em>amily, <em>C</em>onsumer, <em>S</em>cience<br />
+          <span>FCCLA CTSO</span>
+        </h1>
+      </div>
+      <div id="infoAndHeading">
+        <p class="fcsPara">
+          ​Family and Consumer Sciences (FCS) provides the bridge needed by all
+          students to deal with major societal issues such as work-and-family,
+          health care, child and elder care, family and community violence and
+          crime, global economics and politics, and technology usage. FCS
+          Education is a catalyst to bring these issues into action-oriented,
+          skill-building educational programs. The North Carolina FCS Education
+          program provides a platform for students to transition into adult life
+          by gaining a strong foundation of the knowledge and skills needed for
+          successfully living and working in a diverse, global society
+        </p>
+        <h2 class="fcsHeader">
+          FCS Career Pathways and Courses at Green Level High School
+        </h2>
+      </div>
+      <div id="image">
+        <img
+          class="fcsImage"
+          src="images/FoodAndNutrition.jpg"
+          alt="Food and Nutrition Career Pathway"
+        />
+      </div>
+      <div id="mainContent">
+        <h3 class="fn1">Food and Nutrition I</h3>
+        <p class="fn1P">
+          This course examines the nutritional needs of the individual. Emphasis
+          is placed on fundamentals of food production, kitchen and meal
+          management, food groups and their preparation, and time and resource
+          management. English language arts, mathematics, science, and social
+          studies are reinforced.
+          <i>Honors Portfolio is required for Honors Credit.</i>
+        </p>
+        <h3 class="fn2">Food and Nutrition II</h3>
+        <p class="fn2P">
+          In this course, students experience the intersection of nutrition
+          science and food preparation, while building skills for an expanding
+          range of career opportunities. Emphasis is placed on health and social
+          responsibility while improving the way people eat. Students learn how
+          to manage food safety; plan and prepare meals for a variety of
+          consumers and clients; and explore the food system and global
+          cuisines.
+          <i>Honors Portfolio required for Honors credit.</i>
+        </p>
+        <h3 class="mc">Microsoft Word and Powerpoint</h3>
+        <p class="mcP">
+          Students in the Microsoft Imagine Academy benefit from world-class
+          Microsoft curriculum and software tools to tackle real-world
+          challenges in the classroom environment. Students will learn to use
+          the current version of Microsoft Word interface, commands, and
+          features to create, enhance, customize, share and create complex
+          documents, and publish them. Students will learn to use the current
+          version of Microsoft PowerPoint interface, commands, and features to
+          create, enhance, customize, and deliver presentations. ​<i
+            >Honors Portfolio is required for Honors Credit.</i
+          >
+        </p>
       </div>
     </div>
-    <div class="glcte">Green Level CTE</div>
-    <div class="background"></div>
-    <h1 class="mainHeader">
-      <em>F</em>amily, <em>C</em>onsumer, <em>S</em>cience<br />
-      <span>FCCLA CTSO</span>
-    </h1>
-    <p class="fcsPara">
-      ​Family and Consumer Sciences (FCS) provides the bridge needed by all
-      students to deal with major societal issues such as work-and-family,
-      health care, child and elder care, family and community violence and
-      crime, global economics and politics, and technology usage. FCS Education
-      is a catalyst to bring these issues into action-oriented, skill-building
-      educational programs. The North Carolina FCS Education program provides a
-      platform for students to transition into adult life by gaining a strong
-      foundation of the knowledge and skills needed for successfully living and
-      working in a diverse, global society
-    </p>
-    <h2 class="fcsHeader">
-      FCS Career Pathways and Courses at Green Level High School
-    </h2>
-    <img
-      class="FCSImage"
-      src="images/FoodAndNutrition.jpg"
-      alt="Food and Nutrition Career Pathway"
-    />
-    <h3 class="FN1">Food and Nutrition I</h3>
-    <p class="FN1P">
-      This course examines the nutritional needs of the individual. Emphasis is
-      placed on fundamentals of food production, kitchen and meal management,
-      food groups and their preparation, and time and resource management.
-      English language arts, mathematics, science, and social studies are
-      reinforced.
-      <i>Honors Portfolio is required for Honors Credit.</i>
-    </p>
-    <h3 class="FN2">Food and Nutrition II</h3>
-    <p class="FN2P">
-      In this course, students experience the intersection of nutrition science
-      and food preparation, while building skills for an expanding range of
-      career opportunities. Emphasis is placed on health and social
-      responsibility while improving the way people eat. Students learn how to
-      manage food safety; plan and prepare meals for a variety of consumers and
-      clients; and explore the food system and global cuisines.
-      <i>Honors Portfolio required for Honors credit.</i>
-    </p>
-    <h3 class="mc1">Microsoft Word and Powerpoint</h3>
-    <p class="mc1P">
-      Students in the Microsoft Imagine Academy benefit from world-class
-      Microsoft curriculum and software tools to tackle real-world challenges in
-      the classroom environment. Students will learn to use the current version
-      of Microsoft Word interface, commands, and features to create, enhance,
-      customize, share and create complex documents, and publish them. Students
-      will learn to use the current version of Microsoft PowerPoint interface,
-      commands, and features to create, enhance, customize, and deliver
-      presentations. ​<i>Honors Portfolio is required for Honors Credit.</i>
-    </p>
   </body>
 </html>
