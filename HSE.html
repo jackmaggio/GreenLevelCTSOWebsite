@@ -14,35 +14,189 @@
         font-size: 30px;
         color: rgb(32, 156, 32);
       }
+      html,
+      body {
+        margin: 0;
+      }
+      #grid {
+        display: grid;
+        grid-row-gap: 0;
+        grid-column-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 6em 15em 3.5em 10em 47em 10em;
+        background-color: white;
+        width: 100%;
+      }
+      #menu {
+        text-align: left;
+        float: left;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #slogan {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #infoAndHeading {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      #image {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 5;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 27em;
+      }
+      #mainContent {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 5;
+        position: relative;
+        max-width: 25em;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 27em;
+      }
+      #newCourse {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 6;
+        text-align: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 27em;
+      }
       h1.mainHeader {
         text-align: center;
         color: lightgrey;
-        top: 100px;
-        margin-left: 580px;
+        bottom: 3.7em;
+        max-height: 3em;
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 60px;
         font-family: serif;
         z-index: 2;
-        position: absolute;
+        position: relative;
       }
+
       .background {
         background-color: rgb(20, 3, 95);
-        width: 1100px;
-        height: 200px;
+        width: 70em;
+        height: 14em;
+        margin-left: auto;
+        margin-right: auto;
         z-index: 1;
-        position: absolute;
-        margin-top: -210px;
-        margin-left: 380px;
+        position: relative;
+      }
+
+      .dropButton:hover,
+      .dropButton:focus {
+        background-color: blue;
+      }
+
+      .glcte {
+        position: relative;
+        top: 1.7em;
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .hseHeader {
+        position: relative;
+        text-align: center;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+        overflow: auto;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 7%;
+        padding-left: 7%;
+      }
+      .hseImage {
+        height: 45em;
+        width: 32em;
+      }
+      .hs1,
+      .hs2,
+      .mc {
+        color: rgb(32, 156, 32);
+        position: relative;
+        font-size: 30px;
+        text-align: left;
+      }
+
+      .hs1P,
+      .hs2P,
+      .mcP {
+        font-size: 17px;
+        font-weight: bold;
+        color: darkslategray;
+        position: relative;
+        min-width: 25em;
+      }
+      .hs1 {
+        bottom: 1.2em;
+      }
+      .hs1P {
+        bottom: 3.2em;
+        color: darkslategray;
+      }
+      .hs2 {
+        bottom: 2em;
+      }
+      .hs2P {
+        bottom: 4.5em;
+      }
+      .mc {
+        bottom: 3em;
+      }
+      .mcP {
+        bottom: 6.5em;
+      }
+
+      .hsePara {
+        position: relative;
+        font-size: 20px;
+        max-width: 55em;
+        text-align: left;
       }
       .dropButton {
         background-color: black;
         color: white;
-        padding: 16px;
-        font-size: 16px;
+        font-size: 100%;
         border: none;
         cursor: pointer;
-        top: 60px;
-        margin-left: 380px;
-        position: absolute;
+        position: relative;
+        min-width: 5em;
+        min-height: 2em;
+        top: 3em;
       }
       .dropButton:hover,
       .dropButton:focus {
@@ -53,12 +207,13 @@
         display: none;
         position: absolute;
         background-color: #f1f1f1;
-        min-width: 160px;
+        min-width: 10%;
+        max-width: 30%;
+        height: auto;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 5;
         text-align: left;
-        margin-left: 380px;
-        top: 110px;
+        top: 5em;
       }
       .dropdown-content a {
         color: black;
@@ -71,92 +226,6 @@
       }
       .show {
         display: block;
-      }
-      .glcte {
-        position: absolute;
-        right: 415px;
-        top: 75px;
-        font-size: 30px;
-        font-weight: bold;
-      }
-      p.hsePara {
-        margin-top: 330px;
-        margin-left: 400px;
-        margin-right: 400px;
-        text-align: left;
-        font-size: 20px;
-      }
-      h2.hseHeader {
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-        margin-left: 0px;
-        margin-right: 00px;
-        margin-top: 5px;
-        text-align: center;
-        font-weight: 1000;
-      }
-      .HSEImage {
-        height: 600px;
-        width: 500px;
-        margin-left: 400px;
-        margin-top: 20px;
-      }
-      .hs1,
-      .hs2,
-      .mc1 {
-        color: rgb(32, 156, 32);
-        font-size: 20px;
-      }
-      .hs1 {
-        position: absolute;
-        right: 740px;
-        top: 460px;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-      }
-      .hs1P {
-        position: absolute;
-        right: 447px;
-        top: 510px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
-      }
-      .hs2 {
-        position: absolute;
-        right: 730px;
-        top: 650px;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-      }
-      .hs2P {
-        position: absolute;
-        right: 447px;
-        top: 700px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
-      }
-      .mc1 {
-        position: absolute;
-        right: 530px;
-        top: 860px;
-        color: rgb(32, 156, 32);
-        font-size: 30px;
-      }
-      .mc1P {
-        position: absolute;
-        right: 447px;
-        top: 910px;
-        font-size: 17px;
-        text-align: left;
-        width: 500px;
-        font-weight: bold;
-        color: darkslategray;
       }
     </style>
     <script>
@@ -178,72 +247,87 @@
     </script>
   </head>
   <body>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropButton">Menu</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="CSTOHome.html">Home</a>
-        <a href="WhyCTE.html">Why CTE?</a>
-        <a href="CTECareerPathways.html">CTE Career Pathways</a>
-        <a href="AgriculturalEducation.html">Agricultural Education</a>
-        <a href="BFM.html">Business, Finance, Marketing</a>
-        <a href="csIT.html">Computer Science & IT</a>
-        <a href="FCS.html">Family Consumer Science</a>
-        <a href="HSE.html">Health Science Education</a>
-        <a href="TTEI.html">Trade Technology Engineering Education</a>
-        <a href="CTEInternship.html">CTE Internship</a>
-        <a href="CTSO.html">CTSO</a>
+    <div id="grid">
+      <div id="menu">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropButton">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="CSTOHome.html">Home</a>
+            <a href="WhyCTE.html">Why CTE?</a>
+            <a href="CTECareerPathways.html">CTE Career Pathways</a>
+            <a href="AgriculturalEducation.html">Agricultural Education</a>
+            <a href="BFM.html">Business, Finance, Marketing</a>
+            <a href="csIT.html">Computer Science & IT</a>
+            <a href="FCS.html">Family Consumer Science</a>
+            <a href="HSE.html">Health Science Education</a>
+            <a href="TTEI.html">Trade Technology Engineering Education</a>
+            <a href="CTEInternship.html">CTE Internship</a>
+            <a href="CTSO.html">CTSO</a>
+          </div>
+        </div>
+      </div>
+      <div id="slogan"><div class="glcte">Green Level CTE</div></div>
+      <div id="title">
+        <div class="background"></div>
+        <h1 class="mainHeader">
+          <em>H</em>ealth, <em>S</em>cience, <em>E</em>ducation<br />
+          <span>HOSA CTSO</span>
+        </h1>
+      </div>
+      <div id="infoAndHeading">
+        <p class="hsePara">
+          ​Health Science Education provides a comprehensive program to meet
+          present and projected needs for the healthcare industry. Curriculum
+          concepts incorporate technological advances to motivate students and
+          prepare them to pursue a career as a future health professional.
+        </p>
+        <h2 class="hseHeader">
+          Health Science Career Pathways and Courses at Green Level High School
+        </h2>
+      </div>
+      <div id="image">
+        <img
+          class="hseImage"
+          src="images/HealthScience.jpg"
+          alt="Health Professional Career Pathway"
+        />
+      </div>
+      <div id="mainContent">
+        <h3 class="hs1">Health Science I</h3>
+        <p class="hs1P">
+          ​This course is developed to focus on human anatomy, physiology and
+          human body diseases and disorders, and recognizing and responding to
+          first aid emergencies. Students will learn about healthcare careers
+          within the context of human body systems. Projects, teamwork, and
+          demonstrations serve as instructional strategies that reinforce the
+          curriculum content.
+          <i>Honors Portfolio is required for Honors Credit.</i>
+        </p>
+        <h3 class="hs2">Health Science II</h3>
+        <p class="hs2P">
+          This course is developed to help students expand their understanding
+          of the healthcare industry; including; employability skills, safety
+          and infection control procedures, and clinical skills used by allied
+          health professionals. In addition, students will demonstrate their
+          understanding of the cardiovascular and respiratory systems by
+          applying BLS CPR skills. Projects, teamwork, and demonstrations serve
+          as instructional strategies to reinforce the curriculum content.​
+          <i>Honors Portfolio required for Honors credit.</i>
+        </p>
+        <h3 class="mc">Microsoft Word and Powerpoint</h3>
+        <p class="mcP">
+          Students in the Microsoft Imagine Academy benefit from world-class
+          Microsoft curriculum and software tools to tackle real-world
+          challenges in the classroom environment. Students will learn to use
+          the current version of Microsoft Word interface, commands, and
+          features to create, enhance, customize, share and create complex
+          documents, and publish them. Students will learn to use the current
+          version of Microsoft PowerPoint interface, commands, and features to
+          create, enhance, customize, and deliver presentations. ​<i
+            >Honors Portfolio is required for Honors Credit.</i
+          >
+        </p>
       </div>
     </div>
-    <div class="glcte">Green Level CTE</div>
-    <div class="background"></div>
-    <h1 class="mainHeader">
-      <em>H</em>ealth, <em>S</em>cience, <em>E</em>ducation<br />
-      <span>HOSA CTSO</span>
-    </h1>
-    <p class="hsePara">
-      ​Health Science Education provides a comprehensive program to meet present
-      and projected needs for the healthcare industry. Curriculum concepts
-      incorporate technological advances to motivate students and prepare them
-      to pursue a career as a future health professional.
-    </p>
-    <h2 class="hseHeader">
-      Health Science Career Pathways and Courses at Green Level High School
-    </h2>
-    <img
-      class="HSEImage"
-      src="images/HealthScience.jpg"
-      alt="Health Professional Career Pathway"
-    />
-    <h3 class="hs1">Health Science I</h3>
-    <p class="hs1P">
-      ​This course is developed to focus on human anatomy, physiology and human
-      body diseases and disorders, and recognizing and responding to first aid
-      emergencies. Students will learn about healthcare careers within the
-      context of human body systems. Projects, teamwork, and demonstrations
-      serve as instructional strategies that reinforce the curriculum content.
-      <i>Honors Portfolio is required for Honors Credit.</i>
-    </p>
-    <h3 class="hs2">Health Science II</h3>
-    <p class="hs2P">
-      This course is developed to help students expand their understanding of
-      the healthcare industry; including; employability skills, safety and
-      infection control procedures, and clinical skills used by allied health
-      professionals. In addition, students will demonstrate their understanding
-      of the cardiovascular and respiratory systems by applying BLS CPR skills.
-      Projects, teamwork, and demonstrations serve as instructional strategies
-      to reinforce the curriculum content.​
-      <i>Honors Portfolio required for Honors credit.</i>
-    </p>
-    <h3 class="mc1">Microsoft Word and Powerpoint</h3>
-    <p class="mc1P">
-      Students in the Microsoft Imagine Academy benefit from world-class
-      Microsoft curriculum and software tools to tackle real-world challenges in
-      the classroom environment. Students will learn to use the current version
-      of Microsoft Word interface, commands, and features to create, enhance,
-      customize, share and create complex documents, and publish them. Students
-      will learn to use the current version of Microsoft PowerPoint interface,
-      commands, and features to create, enhance, customize, and deliver
-      presentations. ​<i>Honors Portfolio is required for Honors Credit.</i>
-    </p>
   </body>
 </html>
