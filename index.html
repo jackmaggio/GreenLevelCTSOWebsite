@@ -4,41 +4,152 @@
     <meta charset="UTF-8" />
     <title>Green Level CTSO</title>
     <style>
+      em {
+        color: rgb(32, 156, 32);
+        font-style: normal;
+        font-size: 70px;
+      }
+      span.green {
+        font-size: 20px;
+        color: rgb(32, 156, 32);
+      }
+      span.darkBlue {
+        font-size: 30px;
+        color: rgb(45, 0, 129);
+        font-weight: bold;
+      }
+      html,
+      body {
+        margin: 0;
+      }
+      #grid {
+        display: grid;
+        grid-row-gap: 0;
+        grid-column-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 5em 18em 16em 15em;
+        background-color: white;
+        width: 100%;
+      }
+      #menu {
+        text-align: left;
+        float: left;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 8%;
+      }
+      #slogan {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 0%;
+      }
+      #title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #mainContent {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 3;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #image {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
       h1.mainHeader {
         text-align: center;
-        background-color: #305882;
-        color: limegreen;
-        margin-right: 0;
-        margin-left: 0;
-        margin-top: 0px;
+        color: lightgrey;
+        top: 0em;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 50px;
+        font-family: serif;
+        z-index: 2;
+        position: relative;
+        line-height: 0.8em;
       }
-      h1 span {
-        font-weight: 700;
-        font-size: 80px;
+      .background {
+        background-color: rgb(20, 3, 95);
+        width: 70em;
+        height: 14em;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+        position: relative;
+      }
+
+      h2.whyCTEHeader {
+        position: relative;
+        text-align: left;
+        color: rgb(32, 156, 32);
+        font-size: 30px;
+        overflow: auto;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .whyCTEParagraph {
+        position: relative;
+        font-size: 20px;
+        width: 55em;
+        text-align: left;
+        left: 0em;
+      }
+
+      .glcte {
+        position: relative;
+        top: 1.7em;
+        font-size: 2em;
+        font-weight: bold;
+        width: 10em;
+      }
+      .glImage {
+        height: 15em;
+        width: 30em;
       }
       .dropButton {
         background-color: black;
         color: white;
-        padding: 16px;
-        font-size: 16px;
+        font-size: 100%;
         border: none;
         cursor: pointer;
+        position: relative;
+        min-width: 5em;
+        height: 3em;
+        top: 3em;
       }
       .dropButton:hover,
       .dropButton:focus {
         background-color: blue;
       }
-      .dropdown {
-        position: relative;
-      }
+
       .dropdown-content {
         display: none;
         position: absolute;
         background-color: #f1f1f1;
-        min-width: 160px;
+        min-width: 10%;
+        max-width: 30%;
+        height: auto;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+        z-index: 5;
         text-align: left;
+        top: 5.5em;
       }
       .dropdown-content a {
         color: black;
@@ -51,12 +162,6 @@
       }
       .show {
         display: block;
-      }
-      .glGatorsMascot {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
       }
     </style>
     <script>
@@ -79,32 +184,62 @@
   </head>
 
   <body>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropButton">Menu</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="CSTOHome.html">Home</a>
-        <a href="WhyCTE.html">Why CTE?</a>
-        <a href="CTECareerPathways.html">CTE Career Pathways</a>
-        <a href="AgriculturalEducation.html">Agricultural Education</a>
-        <a href="BFM.html">Business, Finance, Marketing</a>
-        <a href="csIT.html">Computer Science & IT</a>
-        <a href="FCS.html">Family Consumer Science</a>
-        <a href="HSE.html">Health Science Education</a>
-        <a href="TTEI.html">Trade Technology Engineering Education</a>
-        <a href="CTEInternship.html">CTE Internship</a>
-        <a href="CTSO.html">CTSO</a>
+    <div id="grid">
+      <div id="menu">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropButton">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="CTECareerPathways.html">CTE Career Pathways</a>
+            <a href="AgriculturalEducation.html">Agricultural Education</a>
+            <a href="BFM.html">Business, Finance, Marketing</a>
+            <a href="csIT.html">Computer Science & IT</a>
+            <a href="FCS.html">Family Consumer Science</a>
+            <a href="HSE.html">Health Science Education</a>
+            <a href="TTEI.html">Trade Technology Engineering Education</a>
+            <a href="CTEInternship.html">CTE Internship</a>
+            <a href="CTSO.html">CTSO</a>
+          </div>
+        </div>
+      </div>
+      <div id="slogan"><div class="glcte">Green Level CTE</div></div>
+      <div id="title">
+        <div class="background">
+          <h1 class="mainHeader">
+            <span class="green">All about</span><br />
+            Career and Technical Education
+            <br />
+            <span class="green">at</span><br />
+            <span class="green">Green Level High School</span>
+          </h1>
+        </div>
+      </div>
+      <div id="mainContent">
+        <h2 class="whyCTEHeader">Why CTE?</h2>
+        <p class="whyCTEParagraph">
+          The mission of Career and Technical Education (CTE) is to empower all
+          students to be successful citizens, workers and leaders in a global
+          economy. CTE gives purpose to learning by emphasizing real-world
+          skills and practical knowledge. Programs in Career and Technical
+          Education are designed to contribute to the broad educational
+          achievement of students, including basic skills such as reading,
+          writing, and mathematics, as well as their ability to work
+          independently and as part of a team, think creatively, solve problems,
+          and utilize technology. These tools and experiences make school more
+          relevant, and ensure students are ready for the real world. Whether
+          students plan to further their education in community colleges,
+          technical schools, four-year colleges and universities, receive
+          on-the-job training, or pursue careers in the military, CTE can be the
+          first step in a pathway toward productive employment and citizenship.
+        </p>
+      </div>
+      <div id="image">
+        <img
+          class="glImage"
+          src="images/greenLevelGators.jpg"
+          alt="Green Level Gators"
+        />
       </div>
     </div>
-    <img
-      class="glGatorsMascot"
-      src="images/greenLevelGators.jpg"
-      alt="Green Level Gators"
-    />
-    <h1 class="mainHeader">
-      All about<br />
-      <span style="color: lightgrey">Career and Technical Education</span><br />
-      at<br />
-      Green Level High School
-    </h1>
   </body>
 </html>

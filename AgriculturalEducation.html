@@ -23,7 +23,7 @@
         grid-row-gap: 0;
         grid-column-gap: 1em;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 4em 17em 2em 10em 27em 10em;
+        grid-template-rows: 4.5em 17em 2em 10em 27em 10em;
         background-color: white;
         width: 100%;
       }
@@ -43,7 +43,7 @@
         grid-row: 1;
         margin-left: auto;
         margin-right: auto;
-        padding-right: 8%;
+        padding-right: 0%;
       }
       #title {
         grid-column-start: 1;
@@ -100,17 +100,12 @@
         z-index: 1;
         position: relative;
       }
-
-      .dropButton:hover,
-      .dropButton:focus {
-        background-color: blue;
-      }
-
       .glcte {
         position: relative;
         top: 1.7em;
         font-size: 2em;
         font-weight: bold;
+        width: 10em;
       }
 
       .agrHeader {
@@ -160,7 +155,7 @@
         color: darkslategray;
         position: relative;
         padding-left: 0;
-        max-width: 67em;
+        width: 67em;
       }
       .as1 {
         bottom: 1.2em;
@@ -207,7 +202,7 @@
         cursor: pointer;
         position: relative;
         min-width: 5em;
-        min-height: 2em;
+        min-height: 3em;
         top: 3em;
       }
       .dropButton:hover,
@@ -264,8 +259,7 @@
         <div class="dropdown">
           <button onclick="myFunction()" class="dropButton">Menu</button>
           <div id="myDropdown" class="dropdown-content">
-            <a href="CSTOHome.html">Home</a>
-            <a href="WhyCTE.html">Why CTE?</a>
+            <a href="index.html">Home</a>
             <a href="CTECareerPathways.html">CTE Career Pathways</a>
             <a href="AgriculturalEducation.html">Agricultural Education</a>
             <a href="BFM.html">Business, Finance, Marketing</a>

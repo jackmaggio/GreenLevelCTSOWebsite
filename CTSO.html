@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    em {
+      color: rgb(32, 156, 32);
+      font-style: normal;
+      font-size: 70px;
+    }
+    span.green {
+      font-size: 17px;
+      color: rgb(32, 156, 32);
+    }
+    span.darkBlue {
+      font-size: 17px;
+      color: rgb(45, 0, 129);
+      font-weight: bold;
+    }
+    html,
+    body {
+      margin: 0;
+    }
+    #grid {
+      display: grid;
+      grid-row-gap: 0;
+      grid-column-gap: 1em;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 5.5em 17em 10em 22em 29em 25em;
+      background-color: white;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #menu {
+      text-align: left;
+      float: left;
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row: 1;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 8%;
+    }
+    #slogan {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row: 1;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 8%;
+    }
+    #title {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row: 2;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #infoAndHeading {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row: 3;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    #deca {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row: 4;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 35%;
+    }
+    #fccla {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row: 4;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 35%;
+    }
+    #fbla {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row: 5;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 35%;
+    }
+    #ffa {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row: 5;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 35%;
+    }
+    #hosa {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row: 6;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 35%;
+    }
+    .decaHeader,
+    .decaLink {
+      display: inline;
+    }
+    .fcclaHeader,
+    .fcclaLink {
+      display: inline;
+    }
+    .fblaHeader,
+    .fblaLink {
+      display: inline;
+    }
+    .ffaHeader,
+    .ffaLink {
+      display: inline;
+    }
+    .hosaHeader,
+    .hosaLink {
+      display: inline;
+    }
+
+    .glcte {
+      position: relative;
+      left: 0;
+      top: 1.7em;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    h1.mainHeader {
+      text-align: center;
+      color: lightgrey;
+      top: 0.5em;
+      max-height: 3em;
+      overflow: auto;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 60px;
+      font-family: serif;
+      z-index: 2;
+      position: relative;
+    }
+    .background {
+      background-color: rgb(20, 3, 95);
+      width: 70em;
+      height: 14em;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 1;
+      position: relative;
+    }
+
+    .decaHeader,
+    .fcclaHeader,
+    .fblaHeader,
+    .ffaHeader,
+    .hosaHeader {
+      color: rgb(32, 156, 32);
+      position: relative;
+      font-size: 40px;
+      text-align: left;
+      padding-right: 4%;
+      padding-left: 10%;
+    }
+    .decaPara,
+    .fcclaPara,
+    .fblaPara,
+    .ffaPara,
+    .hosaPara {
+      font-size: 17px;
+      color: darkslategray;
+      position: relative;
+      width: 80%;
+      padding-left: 10%;
+      text-align: left;
+    }
+    .decaLink,
+    .fcclaLink,
+    .fblaLink,
+    .ffaLink,
+    .hosaLink {
+      font-weight: bold;
+      color: darkslategray;
+      font-size: 35px;
+    }
+    .ctsoPara {
+      position: relative;
+      font-size: 20px;
+      max-width: 55em;
+      text-align: left;
+      left: 0em;
+    }
+    .dropButton {
+      background-color: black;
+      color: white;
+      font-size: 100%;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      min-width: 5em;
+      min-height: 3em;
+      left: 0em;
+      top: 3em;
+    }
+    .dropButton:hover,
+    .dropButton:focus {
+      background-color: blue;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 10%;
+      max-width: 30%;
+      height: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 5;
+      text-align: left;
+      top: 5.5em;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .show {
+      display: block;
+    }
+  </style>
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function (event) {
+      if (!event.target.matches(".dropButton")) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body>
+  <div id="grid">
+    <div id="menu">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropButton">Menu</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="CTECareerPathways.html">CTE Career Pathways</a>
+          <a href="AgriculturalEducation.html">Agricultural Education</a>
+          <a href="BFM.html">Business, Finance, Marketing</a>
+          <a href="csIT.html">Computer Science & IT</a>
+          <a href="FCS.html">Family Consumer Science</a>
+          <a href="HSE.html">Health Science Education</a>
+          <a href="TTEI.html">Trade Technology Engineering Education</a>
+          <a href="CTEInternship.html">CTE Internship</a>
+          <a href="CTSO.html">CTSO</a>
+        </div>
+      </div>
+    </div>
+    <div id="slogan"><div class="glcte">Green Level CTE</div></div>
+    <div id="title">
+      <div class="background">
+        <h1 class="mainHeader">
+          <em>C</em>areer and <em>T</em>echnical Education<br />
+          <em>S</em>tudent <em>O</em>rganizations
+        </h1>
+      </div>
+    </div>
+    <div id="infoAndHeading">
+      <p class="ctsoPara">
+        ​Career and Technical Student Organizations (CTSO) enhance student
+        learning through contextual instruction, leadership and personal
+        development, applied learning and real world application. At Green Level
+        high school we offer 5 CTSO opportunities: DECA, FBLA, FCCLA, FFA and
+        HOSA.
+      </p>
+    </div>
+    <div id="deca">
+      <h2 class="decaHeader">DECA</h2>
+      <a href="http://www.ncdeca.org/" class="decaLink">www.ncdeca.org/</a>
+      <p class="decaPara">
+        ​DECA prepares emerging leaders and entrepreneurs for careers in
+        marketing, finance, hospitality, and management. It provides students
+        with leadership opportunities at the local, state, and national
+        levels.<br />
+        <br />
+        <i
+          ><span class="darkBlue"
+            >In order to join DECA at Green Level High School, you must be
+            enrolled in either Entrepreneurship I, Entrepreneurship II or
+            Principles of Business during the school year or have completed the
+            Level I and Level II courses of the career pathways associated with
+            DECA.</span
+          >
+          <span class="green"
+            >For DECA that means you have completed the Entrepreneurship Pathway
+            (Entrepreneurship I and Entrepreneurship II courses).</span
+          >
+        </i>
+      </p>
+    </div>
+    <div id="fccla">
+      <h2 class="fcclaHeader">FCCLA</h2>
+      <a href="https://www.ncfccla.org/" class="fcclaLink">www.ncfccla.org/</a>
+      <p class="fcclaPara">
+        ​Family, Career and Community Leaders of America (FCCLA) is a national
+        Career and Technical Student Organization that provides personal growth,
+        leadership development, and career preparation opportunities for
+        students in Family and Consumer Sciences education. <br />
+        <br />
+        <i
+          ><span class="darkBlue"
+            >In order to join FCCLA at Green Level High School, you must be
+            enrolled in either Food and Nutrition I or Food and Nutrition II
+            during the school year or have completed the Level I and Level II
+            courses of the career pathways associated with FCCLA.</span
+          >
+          <span class="green"
+            >For FCCLA that means you have completed the Food and Nutrition
+            Pathway (Food and Nutrition I and Food and Nutrition II
+            courses).</span
+          ></i
+        >
+      </p>
+    </div>
+    <div id="fbla">
+      <h2 class="fblaHeader">FBLA</h2>
+      <a href="https://www.fbla-pbl.org/" class="fblaLink">www.fbla-pbl.org/</a>
+      <p class="fblaPara">
+        ​FBLA is organized on local, state, and national levels. FBLA is one of
+        the largest business career student organization in the world. It
+        provides students opportunities to develop and apply leadership, social,
+        civic, and business-related skills.<br />
+        <br />
+        <i
+          ><span class="darkBlue"
+            >In order to join FBLA at Green Level High School, you must be
+            enrolled in either AP Computer Science, Entrepreneurship I,
+            Entrepreneurship II, Microsoft Excel, Microsoft Word and PowerPoint,
+            Principles of Business, Python Programming I, or Python Programming
+            II during the school year or have completed the Level I and Level II
+            courses of the career pathways associated with FBLA.</span
+          >
+          ​<span class="green"
+            >For FBLA that means you have completed either the AP Computer
+            Science Principles Pathway (AP Computer Science Principles and AP
+            Computer Science A courses) or the Python Programming Pathway
+            (Python Programming I and Python Programming II courses) or the
+            Entrepreneurship Pathway (Entrepreneurship I and Entrepreneurship II
+            courses).</span
+          ></i
+        >
+      </p>
+    </div>
+    <div id="ffa">
+      <h2 class="fblaHeader">FFA</h2>
+      <a href="https://www.ffa.org/" class="ffaLink">www.ffa.org/</a>
+      <p class="ffaPara">
+        ​FFA is the premier youth organization preparing members for leadership
+        and careers in the science, business and technology of agriculture.<br />
+        <br />
+        <i
+          ><span class="darkBlue"
+            >In order to join FFA at Green Level High School, you must be
+            enrolled in either Animal Science I, Animal Science II, Horticulture
+            I or Horticulture II during the school year or have completed the
+            Level I and Level II courses of the career pathway associated with
+            FFA.</span
+          >
+          <span class="green"
+            >For FFA that means you have completed either the Animal Science
+            Pathway (Animal Science I and Animal Science II courses) or the
+            Plant Systems Pathway (Horticulture I and Horticulture II
+            courses).</span
+          ></i
+        >
+      </p>
+    </div>
+    <div id="hosa">
+      <h2 class="hosaHeader">HOSA</h2>
+      <a href="https://hosa.org/" class="hosaLink">www.hosa.org/</a>
+      <p class="hosaPara">
+        HOSA ​​www.hosa.org/ The purpose of HOSA-Future Health Professionals is
+        to develop leadership and technical HOSA skill competencies through a
+        program of motivation, awareness and recognition, which is an integral
+        part of the Health Science Education instructional program.<br />
+        <br />
+        <i
+          ><span class="darkBlue"
+            >In order to join HOSA at Green Level High School, you must be
+            enrolled in either Health Science I or Health Science II during the
+            school year or have completed the Level I and Level II courses of
+            the career pathways associated with HOSA.</span
+          >
+          <span class="green"
+            >For HOSA that means you have completed either the Health Science
+            Professional Career Pathway (Health Science I and Health Science II
+            courses) or the Biomedical Technology Career Pathway (Health Science
+            I and Biomedical Technology courses).</span
+          ></i
+        >
+      </p>
+    </div>
+  </div>
+</body>
